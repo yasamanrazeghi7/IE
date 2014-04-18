@@ -1,0 +1,72 @@
+body 
+{
+	font-family: Tahoma;
+	font-family:'B tabassom',tahoma;
+	font-size: 20px;
+	direction: rtl;
+}
+#signup-nav
+{
+    width:200px;
+    height:80px;
+    position:absolute;
+    border: 4px groove #EFDECD;
+    top:20%;
+    left:0;
+    z-index:100;
+    background:rgba(239,211,205,0.5);
+    color:#fff;
+    overflow:hidden;
+}
+#start{
+	color:#333;
+	display:block;
+	font-size: 190%;
+	text-align: center;
+	padding-top: 20px;
+}
+#start-btn{
+    margin:5%;
+    width: 90%;
+}
+.modal-header .close {
+  float: left;
+}
+.modal-footer .btn{
+    float: left;
+}
+.input-group
+{
+    padding : 5px;
+    width: 50%;
+}
+
+.input-group label
+{
+    float: right;
+    clear: both;
+    padding-right: 0px;
+}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus
+{   
+    outline: 0;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+              box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    border: 1px solid #66afe9;
+    border-radius: 4px 4px 4px 4px;
+    border-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+#frgt-pass-link
+{
+    padding: 30%;
+}
+#email
+{
+    width: 100%;
+    padding-left:14%;
+    padding-right:14%;;
+    padding-top: 0px;
+    padding-bottom:0px;
+}
+

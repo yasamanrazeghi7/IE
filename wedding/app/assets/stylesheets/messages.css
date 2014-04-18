@@ -1,0 +1,52 @@
+body 
+{
+    direction: rtl;
+    font-family: tahoma;
+	background : url('../images/kab3.png');
+	background-size: 100%;
+	font-family:'B tabassom',tahoma;
+	font-size : 20px;
+}
+.navbar-fixed-top
+{
+    background-color: #F4C2C2;
+	
+}
+#main-content
+{
+    margin: 5%;
+    width: 90%;
+    margin-top:100px;
+    background-color:#EFDECD;
+}
+#new-msg-btn
+{
+    background-color: #CE91B6;
+    border-color:#823463;
+}
+#new-msg-btn:hover{
+    background-color:#A85D8A;
+}
+#del-msg-btn
+{
+    background-color: #DEDEDC;
+    border-color:#5D8AA8;
+}
+#del-msg-btn:hover{
+    background-color:#5D8AA8;
+}
+.list-group
+{
+    padding:0px;
+}
+.modal-header .close {
+  float: left;
+}
+.modal-footer .btn{
+    float: left;
+}
+.input-group
+{
+    margin-bottom: 1%;
+    width:100%;
+}

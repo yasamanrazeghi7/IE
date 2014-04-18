@@ -1,0 +1,132 @@
+<h2>Sign up</h2>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true %></div>
+
+  <div><%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %></div>
+  
+  <div><%= f.label :phone_number %><br />
+    <%= f.password_field :password, autocomplete: "off", :class => 'form-control' %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+<%= render "devise/shared/links" %>
+<!--
+
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+	<head>
+		<title>Sign Up Form</title>
+		<meta charset='utf-8' />
+		<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+		<meta name="language" content="en" />
+		<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/signup.css" />
+    	<link rel="stylesheet" href="css/font.css" />
+	</head>
+	<body>
+        <div class="well">    
+     	    <div class="container-fluid">
+                <form id="signup" class="form-horizontal" role="form">
+            		<legend id="reg">ثبت‌نام</legend>		
+	        	    <div class= "col-md-6">
+	                    <div id="pic"></div>
+                        <button type="button" id="sel-btn" class=" btn btn-primary">انتخاب عکس</button>
+	        	    </div>
+	        	    <div class= "col-md-6 ">
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-5">
+                                <input type="text" class="form-control">
+                            </div>
+	        	            <div class ="col-sm-3">
+                                
+	        	            </div>
+                        </div>    	        	            
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-5">
+                                <input type="password" class="form-control">
+                            </div>
+	        	            <div class ="col-sm-3">
+                                <label class="control-label">گذرواژه</label>
+	        	            </div>
+                        </div>    	        	            
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-5">
+                                <input type="password" class="form-control">
+                            </div>
+	        	            <div class ="col-sm-3">
+                                <label class="control-label">تکرار گذرواژه</label>
+	        	            </div>
+                        </div>    	        	            
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-5">
+                                <input type="text" class="form-control">
+                            </div>
+	        	            <div class ="col-sm-3">
+                                <label class="control-label">نام عروس</label>
+	        	            </div>
+                        </div>    	        	            
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-5">
+                                <input type="text" class="form-control">
+                            </div>
+	        	            <div class ="col-sm-3">
+                                <label class="control-label">نام داماد</label>
+	        	            </div>
+                        </div>    	        	            
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-5">
+                                <input type="email" class="form-control">
+                            </div>
+	        	            <div class ="col-sm-3">
+                                <label class="control-label">ایمیل عروس</label>
+	        	            </div>
+                        </div>    	        	            
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-5">
+                                <input type="email" class="form-control">
+                            </div>
+	        	            <div class ="col-sm-3">
+                                <label class="control-label">ایمیل داماد</label>
+	        	            </div>
+                        </div>    	        	            
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-5">
+                                <input type="text" class="form-control">
+                            </div>
+	        	            <div class ="col-sm-3">
+                                <label class="control-label">تاریخ مراسم</label>
+	        	            </div>
+                        </div>    	        	            
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-5">
+                                <textarea type="text" class="form-control" rows="3"></textarea>
+                            </div>
+	        	            <div class ="col-sm-3">
+                                <label class="control-label">درباره‌ی ما</label>
+	        	            </div>
+                        </div>    	        	            
+	                    <div class = "row " id ="btns">
+	                        <div class="col-sm-offset-6 col-sm-3">
+	                             <button id="cancel-btn" type="button" class="btn btn-danger btn-block">انصراف</button>
+	                        </div>
+                        	<div class="col-sm-3">
+                        	     <button id="save-btn" type="button" class=" btn btn-success btn-block">ذخیره</button>
+                            </div>
+                        </div>
+	        	    </div>
+	        	</form>
+	        </div>	
+	    <div>
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script src="js/signup.js"></script>
+    </body>
+</html>
+       -->
+

@@ -1,0 +1,204 @@
+body 
+{
+	background-image: url("../images/gol1.jpg");
+	background-size: 100%;
+	direction: rtl;
+    font-family: tahoma;
+	font-family:'B tabassom',tahoma;
+	font-size: 20px;
+}
+.navbar-fixed-top
+{
+    background-color: #F4C2C2;
+}
+#main-content
+{
+    margin: 5%;
+    width: 90%;
+    margin-top:50px;
+    background-color:#EFDECD;
+}
+
+#contain
+{	
+	
+	background-color: blue;
+}
+#post
+{
+	margin:5px;
+    padding: 5px;
+	border:2px solid #0000ff;
+	-webkit-border-image:url(../images/kaghaz.jpg) 30 30 round; /* Safari 5 */
+	-o-border-image:url(../images/kaghaz.jpg) 30 30 round; /* Opera */
+	border-image:url(../images/kaghaz.jpg) 30 30 round;
+}
+#comment
+{
+	background-color : #FFFFFF;
+	/*background-color : blue;*/
+	height : auto;
+}
+#time
+{
+		/*background-color : red;*/
+	
+}
+#text
+{
+	height : 100px;
+	width : 80%;
+	margin : 2%;
+	padding : 2%;
+}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus
+{   
+    outline: 0;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+              box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    border: 1px solid #66afe9;
+    border-radius: 4px 4px 4px 4px;
+    border-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+#reg{
+	
+}
+#addpost
+{
+	padding : 2%;
+	margin : 2%;
+}
+.container {
+	margin-top : 100px;
+	background-image: transparent;
+	background-color:#FFFCFF;
+
+}
+.well 
+{
+	background-image: inherit;
+	margin-right : 100px;
+	margin-left : 100px;
+	background-color:#FFF8F8;
+}
+.input-group label
+{
+    float: right;
+    clear: both;
+    padding-right: 0px;
+}
+
+.modal-header .close {
+  float: left;
+}
+.modal-footer .btn{
+    float: left;
+}
+.input-group
+{
+    padding : 5px;
+    width: 50%;
+}
+
+.input-group label
+{
+    float: right;
+    clear: both;
+    padding-right: 0px;
+}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus
+{   
+    outline: 0;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+              box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    border: 1px solid #66afe9;
+    border-radius: 4px 4px 4px 4px;
+    border-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+#frgt-pass-link
+{
+    padding: 30%;
+}
+#inText
+{
+	font-size : 25px;
+}
+#pict
+{
+	height : 70px;
+	width : 70px;
+}
+#email
+{
+    width: 100%;
+    padding-left:14%;
+    padding-right:14%;;
+    padding-top: 0px;
+    padding-bottom:0px;
+}
+input[type=text] {
+    padding: 0;
+    height: 30px;
+    position: relative;
+    left: 0;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    background-color: white;
+    font-size: 16px;
+}
+.advancedSearchTextbox {
+    width: 526px;
+    margin-right: -4px;
+}
+#man
+  {
+  margin:5px;
+  padding: 5px;
+  border:7px solid #0000ff;
+  height:auto;
+  width:auto;
+  -webkit-border-image:url(../images/border.jpg) 30 30 round; /* Safari 5 */
+	-o-border-image:url(../images/border.jpg) 30 30 round; /* Opera */
+	border-image:url(../images/border.jpg) 30 30 round;
+  }
+#inimg
+  {
+  height: 70 px;
+  width : 70px;
+  display:inline;
+  margin-right:4%;
+  border:1px solid #ffffff;
+  }
+#man:hover 
+  {
+  background-image: url("../images/backForum.jpg");
+  background-color:#ffffff;
+  border:1px solid black;
+  opacity:0.6;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+  border : none;
+  }
+#doc
+  {
+  text-align:right;
+  font-weight:normal;
+  width:auto;
+  margin:0px;
+ }
+/* border */
+#round
+{
+-webkit-border-image:url(border.png) 30 30 round; /* Safari 5 */
+-o-border-image:url(border.png) 30 30 round; /* Opera */
+border-image:url(border.png) 30 30 round;
+}
+
+#stretch
+{
+-webkit-border-image:url(border.png) 30 30 stretch; /* Safari 5 */
+-o-border-image:url(border.png) 30 30 stretch; /* Opera */
+border-image:url(border.png) 30 30 stretch;
+} 
