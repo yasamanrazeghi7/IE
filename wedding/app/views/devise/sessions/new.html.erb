@@ -1,3 +1,30 @@
+     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">ورود</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <label>نام کاربری </label>
+                            <input type="text" class ="col-md-6" >
+                        </div>
+                        <div class="input-group ">
+                            <label> گذرواژه </label>
+                            <input type="password" class ="col-md-6">
+                        </div>
+                    </div>
+                    <p>
+                        <a href="url" data-toggle="modal" data-target="#smallModal" id="frgt-pass-link" >گذرواژه‌ی خود را فراموش کرده‌اید؟</a>
+                    </p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="window.open('profile.html')" >ورود</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
 <h2>Sign in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

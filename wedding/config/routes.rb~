@@ -57,4 +57,7 @@ Wedding::Application.routes.draw do
   #   end
   root :to => "welcome#index"
   devise_for :users
+  devise_scope :user do
+ 	get "sign_in", to: "devise/sessions#new"
+  end
 end

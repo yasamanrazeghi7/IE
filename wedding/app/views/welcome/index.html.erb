@@ -37,16 +37,28 @@
             <div id = "start" >
                <span class="glyphicon glyphicon-chevron-right"></span>
             </div> -->
-            <div class="btn-group-vertical" id="start-btn">
-                <button  class="btn btn-sm btn-primary trans" type="button" id = "signup-btn" onclick="window.open('signup.html')">
+            <!--<li><%= link_to "Edit Account", new_user_session_path %></li> -->
+             <div class="btn-group-vertical" id="start-btn">
+             <!--
+             <div id="main">
+             <li><%= link_to "Edit Account", edit_user_registration_path,   :remote=> true%></li>
+             </div> --> 
+              <%= button_to  "خروج", destroy_user_session_path, :class => 'btn btn-sm btn-primary trans', :type=>'button', :id=>'sign_up_btns'  ,:method => :delete%>
+                 
+
+                <%= button_to  "ثبت‌نام", new_user_registration_path, :class => 'btn btn-sm btn-primary trans', :type=>'button', :id=>'sign_up_btns'  ,:method => :get%>
+             <!-- <button   class="btn btn-sm btn-primary trans" type="button" id = "signup-btn">
                     ثبت‌نام
-                </button>
+                </button>  
                  <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#basicModal">
                  ورود
-                 </a>
+                 </a>-->
                  
+                 <%= button_to  "ورود", new_user_session_path, :class => 'btn btn-sm btn-primary trans', :type=>'button', :id=>'sign_up_btns'  ,:method => :get%>
             </div>
         </div>
+
+        <!--
         <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -73,6 +85,7 @@
                 </div>
             </div>
         </div>
+        --> 
         <div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="smallModal" aria-hidden="true">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
