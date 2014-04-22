@@ -8,9 +8,9 @@ Wedding::Application.routes.draw do
   get "welcome/index"
   root :to => "welcome#index"
   devise_for :users
-  get "product_group", :to => "product_groups#index"
-  get "product_group/show", :to => "product_groups#show"
-  get "product/show", :to => "products#show"
+  get "product_groups", :to => "product_groups#index"
+  get "product_groups/show", :to => "product_groups#show"
+  get "products/show", :to => "products#show"
   
   resources :product_groups do
     resources :products

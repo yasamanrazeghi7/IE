@@ -11,18 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140417072833) do
-  create_table "profiles", force: true do |t|
-    t.string   "brideName"
-    t.string   "groomName"
-    t.string   "userName"
-    t.string   "photo"
-    t.date     "ceremonyDate"
-    t.text     "aboutUs"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20140420062713) do
+
   create_table "product_groups", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -33,6 +23,18 @@ ActiveRecord::Schema.define(version: 20140417072833) do
     t.text     "description"
     t.string   "photo_album"
     t.integer  "product_group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "profiles", force: true do |t|
+    t.string   "brideName"
+    t.string   "groomName"
+    t.string   "userName"
+    t.string   "photo"
+    t.date     "ceremonyDate"
+    t.text     "aboutUs"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,11 +52,6 @@ ActiveRecord::Schema.define(version: 20140417072833) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username"
-    t.string   "brideName"
-    t.string   "groomName"
-    t.string   "brideEmail"
-    t.string   "groomEmail"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
