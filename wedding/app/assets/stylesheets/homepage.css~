@@ -8,7 +8,7 @@ body
 #signup-nav
 {
     width:200px;
-    height:relative;
+    height:80px;
     position:absolute;
     border: 4px groove #EFDECD;
     top:20%;

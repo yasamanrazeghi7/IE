@@ -1,5 +1,6 @@
 Wedding::Application.routes.draw do
   resources :products
+  resources :profiles
 
   resources :product_groups
 
@@ -36,7 +37,7 @@ Wedding::Application.routes.draw do
   #       post 'toggle'
   #     end
   #
-  #     collection do
+  #     collection do	
   #       get 'sold'
   #     end
   #   end
@@ -68,4 +69,15 @@ Wedding::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  devise_scope :user do
+ 	 get "sign_in", to: "devise/sessions#new"
+   get "sign_out" => "devise/sessions#destroy"
+  end
+  get "profile", to: "profiles#index"
+  get "profiles/show", to: "profiles#index"
+  #devise_for :users do
+  #get "welcome" => "devise/registrations#new", :as => :new_user_registration
+  #get "account_settings" => "devise/registrations#edit"
+  #get "sign_out" => "devise/sessions#destroy"
+  #get "new_password", :to => "devise/passwords#new"
 end

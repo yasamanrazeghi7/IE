@@ -1,0 +1,11 @@
+class AddToUsers < ActiveRecord::Migration
+  def change
+   # add_column :users, :bride_name, :string
+   # add_column :users, :groom_name, :string
+   add_column :users, :user_name, :string
+   # add_column :users, :bride_email, :string
+   # add_column :users, :groom_email, :string
+   # add_column :users, :ceremony_date, :date
+   # add_column :users, :about_us, :text
+  end
+end

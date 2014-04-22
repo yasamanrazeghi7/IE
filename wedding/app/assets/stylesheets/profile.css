@@ -7,7 +7,7 @@ body
 	/*background : url('../images/home.jpg');
 	background-size: 100%;*/
 }
-#background {
+#profile_background {
     width: 100%; 
     height: 100%; 
     position: fixed; 
@@ -15,7 +15,7 @@ body
     top: 0px; 
     z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
 }
-#desc{
+#profile_desc{
 	font-size: 25px;
 }
 .stretch {
@@ -26,25 +26,25 @@ body
 {
     background-color: #F4C2C2;
 }
-#main-content
+#profile_main-content
 {
     margin: 5%;
     width: 90%;
     margin-top:50px;
     background-color:#EFDECD;
 }
-#pic img
+#profile_pic img
 {
   margin-top: 10%;
   -webkit-transition: all 2s ease-out;
   transition: all 2s ease-out;
 }
-#pic:hover img, #pic:focus img
+#profile_pic:hover img, #profile_pic:focus img
 {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
-#new-msg-btn
+#profile_new-msg-btn
 {
     background-color: #CE91B6;
     border-color:#823463;
