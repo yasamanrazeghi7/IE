@@ -1,0 +1,57 @@
+body 
+{
+    direction: rtl;
+    font-family: B Nazanin, 'B Nazanin', tahoma;
+	font-family:'B tabassom',tahoma;
+	font-size: 20px;
+}
+.wed-nav
+{
+    background-color: #F4C2C2;
+}
+#main-content
+{
+    margin: 5%;
+    width: 90%;
+    margin-top:50px;
+    background-color:#EFDECD;
+}
+#pic img
+{
+  margin-top: 10%;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+#pic:hover img, #pic:focus img
+{
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+#new-msg-btn
+{
+    background-color: #CE91B6;
+    border-color:#823463;
+}
+#new-msg-btn:hover{
+    background-color:#A85D8A;
+}
+#inCon
+{
+	background-color:white;
+}
+#imgs
+{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: auto;
+}
+#bttn{
+background-color: #EFDECD;
+width:140px;
+text-align: auto;
+margin-left: auto;
+margin-right: 30%;	
+}	
+.btn{
+
+}

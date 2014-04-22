@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Service</title>
+	</head>
+	<body>
+		<%= render "layouts/navbar" , :locals => {:brand => @brand} %>
+       	<div class="jumbotron" id = "main-content">
+            <div class="row">
+                <%= link_to image_tag ("23.jpg") ,{ :class => 'col-md-12 img-responsive' , :alt => 'Responsive image', :id => "prof-pic"}%>
+            </div>
+            <div class ="row">
+			<div class="panel panel-default">
+					<!-- Default panel contents -->
+					<div class="panel-heading"> <%= @brand %>
+					</div>
+					<!-- List group -->
+					<ul class="list-group">
+						<% @pros.each do |i| %>
+						<li class="list-group-item">
+			                <%= link_to image_tag (i.photo_album) ,{ :width => 150, :height => 100, :class => 'img-responsive' , :alt => 'Responsive image'}%>
+							</a>
+								<br/>
+						
+								<%= i.description %>
+						</li>
+					 	<% end %>
+					</ul>
+			</div>
+        </div>
+        </div> 
+	</body>
+</html>
