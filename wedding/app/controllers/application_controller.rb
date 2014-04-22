@@ -18,13 +18,36 @@ class ApplicationController < ActionController::Base
   def require_profile
   	if !current_user.blank?
   		if current_user.profile.blank?
-  			current_user.profile = Profile.new();
-  		else
-  			profile_path
+  			@profile = Profile.new();
+        @profile.save
+        current_user.profile = @profile
   		end
+      #redirect_to profile_path(current_user.profile.id);
   	end
   end
 
+
+  def after_sign_in_path_for(resource)
+    if current_user.profile.blank?
+        @profile = Profile.new();
+        @profile.save
+        current_user.profile = @profile
+      end
+    "/profiles/#{current_user.profile.id}"
+  end
+
+  def after_sign_up_path_for(resource)
+    if current_user.profile.blank?
+        @profile = Profile.new();
+        @profile.save
+        current_user.profile = @profile
+    end
+    "/profiles/#{current_user.profile.id}"
+  end
+
+  def after_sign_out_path_for(resource_or_scope)
+      request.referrer
+  end
 
   protect_from_forgery
 

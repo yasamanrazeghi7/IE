@@ -1,3 +1,4 @@
+<!--
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -31,4 +32,103 @@
 </p>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%= link_to 'Back', profiles_path %> -->
+
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
+        <link href="css/font.css" rel="stylesheet">
+  </head>
+  <body id = "">
+    <div id="profile_background">
+      <img src="images/home.jpg" class="stretch" alt="" />
+      <%= link_to image_tag ("home.jpg") , :class => "stretch" %>
+    </div>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                       <span class="sr-only">Toggle navigation</span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./profile.html">پروفایل ما</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="جست‌وجو">
+                        </div>
+                        <button type="submit" class="btn btn-default">پیدا کن!</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right" >
+                        <li><a href="#">صفحه‌ی اصلی</a></li>
+                        <li><a href="./goods.html">خدمات</a></li>
+                        <li><a href="./forum.html">انجمن</a></li>  
+                        <li class="dropdown" id="test">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">عروسی ما <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="./profile.html">پروفایل</a></li>
+                <li><a href="./messages.html">پیام‌ها</a></li>
+                <li><a href="trello.html">محیط برنامه‌ریزی</a></li>
+                                <li class="divider"></li>
+                <li><a href="homepage.html">خروج</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="jumbotron" id = "profile_main-content">
+            <div class = "row">
+                <div class="col-md-8">
+                    <div class="panel panel-danger" id ="box">
+                        <div class="panel-heading">
+                            <h3 class="panel-title row">
+                                <div class="col-md-5" id = "profile_desc">
+                                  <%= @profile.ceremonyDate %>
+                                </div>
+                                <div class="col-md-7" id="desc">
+                                  <%= @profile.brideName %>
+                                  <%= "و" %>
+                                  <%= @profile.groomName %>
+                                </div>
+
+                            </h3>
+                        </div>
+                        <div class="panel-body" >
+                          <p id = "desc">
+                            <%= @profile.aboutUs %>
+                          </p>
+                         </div>
+                    </div>
+                </div>
+                <div class = "col-md-4">
+                    <div class="container" id="profile_pic">
+                        <img src="images/ax.jpg" class="img-responsive" alt="Responsive image">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row container">
+                <a>
+                    <%= button_to  "ویرایش اطلاعات", edit_profile_path, :class => 'btn btn-primary', :type=>'button', :id=>'profile_new-msg-btn'  ,:method => :get%> </a>
+                    <!-- <a class="btn btn-primary" role="button" id ="new-msg-btn">ویرایش اطلاعات</a> 
+                    <a class="btn btn-danger" role="button" > حذف حساب کاربری</a> -->
+
+                <a>
+                    <%= button_to  "حذف حساب کاربری", edit_profile_path, :class => 'btn btn-primary', :type=>'button', :method => :get%> </a>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>     
+  </body>
+</html>

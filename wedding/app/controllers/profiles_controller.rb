@@ -9,7 +9,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1
   # GET /profiles/1.json
-  def show
+  def show   
   end
 
   # GET /profiles/new

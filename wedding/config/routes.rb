@@ -64,6 +64,7 @@ Wedding::Application.routes.draw do
    get "sign_out" => "devise/sessions#destroy"
   end
   get "profile", to: "profiles#index"
+  get "profiles/show", to: "profiles#index"
   #devise_for :users do
   #get "welcome" => "devise/registrations#new", :as => :new_user_registration
   #get "account_settings" => "devise/registrations#edit"
