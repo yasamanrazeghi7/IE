@@ -1,6 +1,19 @@
 Wedding::Application.routes.draw do
+  resources :products
+
+  resources :product_groups
+
   get "welcome/show"
   get "welcome/index"
+  root :to => "welcome#index"
+  devise_for :users
+  get "product_group", :to => "product_groups#index"
+  get "product_group/show", :to => "product_groups#show"
+  get "product/show", :to => "products#show"
+  
+  resources :product_groups do
+    resources :products
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -55,6 +68,4 @@ Wedding::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root :to => "welcome#index"
-  devise_for :users
 end

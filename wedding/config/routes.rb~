@@ -1,6 +1,8 @@
 Wedding::Application.routes.draw do
+  get "facility_list/show"
   get "welcome/show"
   get "welcome/index"
+  root "facility_list", :to => "facility_list#show"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
