@@ -38,42 +38,36 @@
     <div class="jumbotron" id = "main-content">
     <div class="table-responsive">
       <table class="table table-condensed " id = "inCon">
-          <h2><b>عروس و داماد</b></h2>
+          <h1><b>عروس و داماد</b></h1>
+          <br>
           <tr class="danger" id = "inCon">
               <td class="col-md-4 success" id = "inCon" >
-                <%= link_to image_tag ("12.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%>
+                <div align="center"> <%= link_to image_tag ("12.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
               </td>
               <td class="col-md-4 success td-responsive" id = "inCon" >
-                  <%= link_to image_tag ("13.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%>
+                  <div align="center"> <%= link_to image_tag ("13.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
               </td>
-              <td class="col-md-4 success td-responsive" id = "inCon">
-                  <%= link_to image_tag ("17.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%>
-              </td>
+              
           </tr>
           <tr class="danger" id="inCon"> 
             <td class="col-md-4 success td-responsive" id = "inCon" >
                 <%= link_to "خدمات آرایشی" ,:action => 'show', :name =>"makeup" %>
-                  <span class="glyphicon glyphicon-eye-open"></span> 
+                  <span class="glyphicon glyphicon-eye-open"></span>
                 </td>
             <td class="col-md-4 success" id = "inCon">
-                <%= link_to "آتلیه عکاسی" ,:method => :get,:action => 'show', :name =>"photography" %>
+                <%= link_to "آتلیه عکاسی" ,:method => :get,:action => 'show', :name =>"photography"%>
                   <span class="glyphicon glyphicon-camera"></span> 
             </td>
-            <td class=" col-md-4 success " id = "inCon">
-                <%= link_to "گل و تزیینات" ,:method => :get,:action => 'show', :name =>"flower" %>
-                  <span class="glyphicon glyphicon-leaf"></span> 
-              </td>
+            
           </tr>
           <tr class="danger" id = "inCon">
               <td class="col-md-4 success" id = "inCon" >
-                <%= link_to image_tag ("18.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%>
+                <div align="center"> <%= link_to image_tag ("18.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
               </td>
               <td class="col-md-4 success td-responsive" id = "inCon" >
-                  <%= link_to image_tag ("9.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%>
+                  <div align="center"> <%= link_to image_tag ("9.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
               </td>
-              <td class="col-md-4 success td-responsive" id = "inCon">
-                  <%= link_to image_tag ("19.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%>
-              </td>
+              
           </tr>
           <tr class="danger" id="inCon"> 
             <td class="col-md-4 success td-responsive" id = "inCon" >
@@ -84,29 +78,73 @@
                 <%= link_to "اتومبیل عروس" ,:method => :get,:action => 'show', :name =>"car" %>
                   <span class="glyphicon glyphicon-road"></span> 
             </td>
+            
+          </tr>           
+
+          <tr class="danger" id = "inCon">
+              
+              <td class="col-md-4 success td-responsive" id = "inCon">
+                  <div align="center"> <%= link_to image_tag ("19.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
+              </td>
+              <td class="col-md-4 success td-responsive" id = "inCon">
+                  <div align="center"> <%= link_to image_tag ("17.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
+              </td>
+          </tr>
+          <tr class="danger" id="inCon"> 
+            
             <td class=" col-md-4 success " id = "inCon">
                 <%= link_to "لباس" ,:method => :get,:action => 'show', :name =>"dress" %>
                   <span class="glyphicon glyphicon-user"></span> 
+              </td>
+              <td class=" col-md-4 success " id = "inCon">
+                <%= link_to "گل و تزیینات" ,:method => :get,:action => 'show', :name =>"flower" %>
+                  <span class="glyphicon glyphicon-leaf"></span> 
               </td>
           </tr>           
       </table>
     </div>
     <div>
-            <%= link_to image_tag ("22.jpg") ,{:height => 400, :width => 1150 ,:class => 'img-responsive' , :alt => 'Responsive image'}%>
+            
+
+            <div id="carousel" class="carousel slide center" data-ride="carousel" align="center">
+        <ol class="carousel-indicators" margin: auto>
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1" ></li>
+          <li data-target="#carousel" data-slide-to="2" ></li>
+          <li data-target="#carousel" data-slide-to="3" ></li>  
+          
+        </ol>
+        <div class="carousel-inner" margin: auto>
+          <div class="item active">
+            <%=link_to image_tag("22.jpg", :alt => "Slide1"), {:class => "img-responsive", :alt => "Responsive image"} %>       
+          </div>
+          <div class="item">
+            <%=link_to image_tag("33.jpg", :alt => "Slide2"), {:class => "img-responsive", :alt => "Responsive image"} %>
+          </div>
+          <div class="item">
+            <%=link_to image_tag("34.jpg", :alt => "Slide3"), {:class => "img-responsive", :alt => "Responsive image"} %>
+          </div>
+          <div class="item">
+            <%=link_to image_tag("35.jpg", :alt => "Slide4"), {:class => "img-responsive", :alt => "Responsive image"} %>
+          </div>
+          
+        </div>
+        
+                  </div>
+
       </div>
     <div class="table-responsive">
       <table class="table table-condensed">
-          <h2><b>مراسم</b></h2>
+          <h1><b>مراسم</b></h1>
+              <br>
               <tr class="danger" id = "inCon">
                   <td class="col-md-4 success" id = "inCon" >
-                    <%= link_to image_tag ("14.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%>
+                    <div align="center"> <%= link_to image_tag ("14.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
                   </td>
                   <td class="col-md-4 success td-responsive" id = "inCon" >
-                      <%= link_to image_tag ("20.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%>
+                      <div align="center"> <%= link_to image_tag ("20.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
                   </td>
-                  <td class="col-md-4 success td-responsive" id = "inCon">
-                      <%= link_to image_tag ("11.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%>
-                  </td>
+                
               </tr>
               <tr class="danger" id="inCon"> 
                 <td class="col-md-4 success td-responsive" id = "inCon" >
@@ -117,21 +155,16 @@
                     <%= link_to "سالن مراسم" ,:method => :get,:action => 'show', :name =>"hall" %>
                       <span class="glyphicon glyphicon-glass"></span> 
                 </td>
-                <td class=" col-md-4 success " id = "inCon">
-                    <%= link_to "سفره‌ی عقد" ,:method => :get,:action => 'show', :name =>"wedding" %>
-                      <span class="glyphicon glyphicon-heart"></span> 
-                  </td>
+                
               </tr>           
               <tr class="danger" id = "inCon">
                   <td class="col-md-4 success" id = "inCon" >
-                    <%= link_to image_tag ("15.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%>
+                    <div align="center"> <%= link_to image_tag ("15.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
                   </td>
                   <td class="col-md-4 success td-responsive" id = "inCon" >
-                      <%= link_to image_tag ("26.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%>
+                      <div align="center"> <%= link_to image_tag ("16.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
                   </td>
-                  <td class="col-md-4 success td-responsive" id = "inCon">
-                      <%= link_to image_tag ("10.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%>
-                  </td>
+                  
               </tr>
               <tr class="danger" id="inCon"> 
                 <td class="col-md-4 success td-responsive" id = "inCon" >
@@ -142,9 +175,27 @@
                     <%= link_to "پذیرایی و غذا" ,:method => :get,:action => 'show', :name =>"food" %>
                       <span class="glyphicon glyphicon-cutlery"></span> 
                 </td>
+                
+              </tr>           
+              <tr class="danger" id = "inCon">
+                  
+                  <td class="col-md-4 success td-responsive" id = "inCon">
+                      <div align="center"> <%= link_to image_tag ("10.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
+                  </td>
+                    <td class="col-md-4 success td-responsive" id = "inCon">
+                      <div align="center"> <%= link_to image_tag ("11.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
+                  </td>
+              </tr>
+              <tr class="danger" id="inCon"> 
+
+                </td>
                 <td class=" col-md-4 success " id = "inCon">
                     <%= link_to "کیک و شیرینی" ,:method => :get,:action => 'show', :name =>"cake" %>
                       <span class="glyphicon glyphicon-heart-empty"></span> 
+                  </td>
+                  <td class=" col-md-4 success " id = "inCon">
+                    <%= link_to "سفره‌ی عقد" ,:method => :get,:action => 'show', :name =>"wedding" %>
+                      <span class="glyphicon glyphicon-heart"></span> 
                   </td>
               </tr>           
           </table>

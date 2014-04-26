@@ -5,11 +5,20 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    @product = Product.where(:id=>params[:id]).first
+    @comments = Comment.where(:product_id => params[:id])
+    @newComment = Comment.new
+    
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+
+
+    @comments = Comment.where(:product_id => params[:id])
+    @newComment = Comment.new
+
   end
 
   # GET /products/new
