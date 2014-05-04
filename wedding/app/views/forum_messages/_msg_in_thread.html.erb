@@ -1,0 +1,53 @@
+<div class = "row">   
+    <div class="col-md-12">
+      	<div class="panel panel-danger">
+        	<div class="panel-heading">
+  				<b><%= thread.subject%></b>
+        	</div>
+<div>
+        	<ul class="list-group">
+				<% msgs.each do |comment| %>
+					<li>
+                <br>
+                <div class = "row">
+                  <div class="col-md-11"><%=simple_format("  ")%><%= comment.content %></div>
+                    <div class="col-md-1"><%= link_to image_tag (comment.user.profile.photo) ,{ :width => 100, :height => 80, :class => 'img-responsive' , :alt => 'Responsive image'}%> </div>
+                    </div>
+  		  				<p class="comment_body"><%= comment.user.profile.groomName%>  و  <%= comment.user.profile.brideName%></p>
+                
+    						<h6 class="comment_info">  <%= %><%= time_ago_in_words(comment.created_at) %> ago </h6>
+					</li>
+					<hr>          
+				<% end %>
+        	</ul>
+          </div>
+      	</div>
+    </div>
+</div>
+    <div class=" col-md-10">        
+        <div class="form-group" >
+           <!-- <textarea class="form-control" rows="3" placeholder= " نظر تازه درباره‌ی این آتلیه">
+        	</textarea>-->
+        	
+        	
+		<%= form_for(:forum_message, :url => forum_messages_path) do |f| %>
+
+			    <%= f.label :"نظر تازه" %><br>
+			    <%= f.text_area :content , :size => '80x5'%>
+				<div class="actions">
+			        <%= f.hidden_field :forum_thread_id, :value => thread.id %>
+			        <%= f.submit "نگارش"%><span class="glyphicon glyphicon-pencil"></span></div>
+    			</div>
+    			
+			
+		<% end %>
+	
+
+
+			<p>
+          		
+        <!--  <a class="btn btn-primary" role="button" >نگارش<span class="glyphicon glyphicon-pencil"></span> </a>-->
+        	</p>
+        </div>  
+    </div>
+

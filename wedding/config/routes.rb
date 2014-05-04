@@ -1,4 +1,8 @@
 Wedding::Application.routes.draw do
+  resources :forum_messages
+
+  resources :forum_threads
+
   resources :comments
 
   resources :messages

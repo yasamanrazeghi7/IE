@@ -5,5 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_one :profile 
   has_many :comments, :foreign_key => 'user_id'
+  has_many :forum_messages, :foreign_key => 'user_id'
 end
 

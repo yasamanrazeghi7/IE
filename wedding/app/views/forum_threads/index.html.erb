@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service</title>
+  </head>
+  <body>
+    <%= render "layouts/navbar" , :locals => {:brand => @brand} %>
+        <div class="jumbotron" id = "main-content">
+            <div class="row">
+                <%= link_to image_tag ("17.jpg") ,{ :class => 'col-md-12 img-responsive' , :alt => 'Responsive image', :id => "prof-pic"}%>
+            </div>
+            <div class ="row">
+      <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading"> بحث‌های متداول
+          </div>
+          <!-- List group -->
+          <ul class="list-group">
+            <% @forum_threads.each do |i| %>
+            <li class="list-group-item">
+                
+                <br>
+                <%= link_to i.subject , :action => 'show', :id => i.id %>
+                <br>
+            </li>
+            <% end %>
+          </ul>
+      </div>
+        </div>
+        <div class=" col-md-5">        
+        <div class="form-group" >
+           <!-- <textarea class="form-control" rows="3" placeholder= " نظر تازه درباره‌ی این آتلیه">
+          </textarea>-->
+          <br><br>
+          
+    <%= form_for(:forum_thread, :url => forum_threads_path) do |f| %>
+
+          <%= f.label :"انتخاب موضوع" %><br>
+          <%= f.text_area :subject , :size => '40x1'%>
+        <div class="actions">
+              
+              <%= f.submit "شروع بحث تازه"%><span class="glyphicon glyphicon-pencil"></span></div>
+          </div>
+          
+      
+    <% end %>
+  
+
+
+      <p>
+              
+        <!--  <a class="btn btn-primary" role="button" >نگارش<span class="glyphicon glyphicon-pencil"></span> </a>-->
+          </p>
+        </div>  
+    </div>
+        </div> 
+  </body>
+</html>
