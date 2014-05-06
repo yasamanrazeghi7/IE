@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(version: 20140504054151) do
 
   create_table "comments", force: true do |t|
     t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.integer  "product_id"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "forum_messages", force: true do |t|

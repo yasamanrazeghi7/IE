@@ -14,6 +14,7 @@ Wedding::Application.routes.draw do
 
   get "welcome/show"
   get "welcome/index"
+  get "welcome/search"
   root :to => "welcome#index"
   devise_for :users
   get "product_groups", :to => "product_groups#index"

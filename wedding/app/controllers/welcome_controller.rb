@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
   def index
   end
 
-#  def search
-#  		@products = Product.find(:all, :conditions => ['name like ?', "%#{params[:q]}%"])
-#  end
+  def search
+  		@pros = Product.find(:all, :conditions => ['description like ?', "%#{params[:q]}%"])
+  end
 end
