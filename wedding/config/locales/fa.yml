@@ -208,6 +208,8 @@ fa:
   activerecord:
     models:
         user: 'کاربر'
+        product_group:
+          makeup: 'آرایش'
     errors:
       <<: *errors
     attributes:
@@ -254,7 +256,7 @@ fa:
   updated: 'بروزرسانی انجام شد.'
   edit: 'ویرایش'
   current_value: 'مقدار فعلی'
-
+  makeup : 'آرایش'
 
 
 

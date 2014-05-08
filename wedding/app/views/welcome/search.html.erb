@@ -8,26 +8,30 @@
 	</head>
 	<body>
 		<%= render "layouts/navbar" , :locals => {:brand => @brand} %>
-       	<div class="jumbotron" id = "main-content">
-            
-            <div class ="row">
-			<div class="panel panel-default">
-					<!-- Default panel contents -->
-					<div class="panel-heading">
-						نتایج جست‌وجو
+       	<div class="jumbotron" id = "pg-main-content">
+    	    <div class = "row" align ="center">
+        		<h1 id ="pg-h1">  نتایج جست‌وجو </h1>
+        		<hr class = "style-seven">
+        	</div>		
+			<div class="container-fluid">
+				<% @pros.each do |i| %>
+					<div class = "col-md-4" id = "pg-show-itm">
+					    <div class = "row" align ="center">
+			        		<h2 id ="pg-h2">  <%= i.name %> </h2>
+			        		<hr class = "style-seven">
+			        	</div>		
+			            <div class ="container-fluid more-info">
+			                <%= link_to (image_tag i.photo_album , {:width => '100%', :align => 'center', :class => 'img-responsive' , :alt => 'Responsive image'}) , {:controller => 'products',:action => 'show', :id => i.id}%>
+			            </div>
+			        	<div align="center">
+							<%=truncate( i.description, :length => 90)%>
+							</br>
+							<%= link_to "اطلاعات بیشتر" ,:controller => 'products',:action => 'show', :id => i.id %>
+						</div>
 					</div>
-					<!-- List group -->
-					<ul class="list-group">
-						<% @pros.each do |i| %>
-						<li class="list-group-item">
-			                <%= link_to image_tag (i.photo_album) ,{ :width => 150, :height => 100, :class => 'img-responsive' , :alt => 'Responsive image'}%>
-								<br>
-								<%=truncate( i.description)%>
-								<br>
-								<br>
-								<%= link_to "جزییات" ,:controller => 'products',:action => 'show', :id => i.id %>
-						</li>
-					 	<% end %>
+					<% end %>
+			</div>	
+			
 					</ul>
 			</div>
         </div>

@@ -1,18 +1,5 @@
 @charset "utf-8";
 
-.navbar.navbar-inverse .container-fluid #bs-example-navbar-collapse-1 .nav.navbar-nav.navbar-right .dropdown .dropdown-toggle {
-	text-align: right;
-
-}
-.navbar.navbar-inverse .container-fluid #bs-example-navbar-collapse-1 .nav.navbar-nav.navbar-right .dropdown .dropdown-menu {
-	text-align:right;
-}
-.navbar.navbar-inverse .container-fluid #bs-example-navbar-collapse-1 .navbar-form.navbar-left .form-group .form-control {
-	text-align:right;
-}
-.navbar {
-	background-color:#F4C2C2;
-}
 
 body{
 

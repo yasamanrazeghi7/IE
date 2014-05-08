@@ -1,6 +1,6 @@
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container-fluid wed-nav">
-                    <a class="navbar-brand" href="information.html"><%= locals[:brand] %></a>
+        <nav class="navbar navbar-fixed-top wed-nav" role="navigation">
+            <div class="container-fluid">
+                    <div class="navbar-brand" ><%= locals[:brand] %></div>
                     <%= form_tag '/welcome/search', :method => :get , :class => "navbar-form navbar-left"   do%>
                     <%= text_field_tag :q , nil ,:class =>"form-control" , :placeholder => "جست‌وجو"%>
                     <%= submit_tag 'پیدا کن!' , :class => "btn btn-default"%>

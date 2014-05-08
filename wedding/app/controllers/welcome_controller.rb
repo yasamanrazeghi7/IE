@@ -7,5 +7,6 @@ class WelcomeController < ApplicationController
 
   def search
   		@pros = Product.find(:all, :conditions => ['description like ?', "%#{params[:q]}%"])
+  		@brand = "جست‌وجو برای " + params[:q]
   end
 end
