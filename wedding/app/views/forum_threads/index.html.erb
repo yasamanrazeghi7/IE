@@ -7,55 +7,110 @@
     <title>Service</title>
   </head>
   <body>
+  <br>
+  <br>
+  <br>
     <%= render "layouts/navbar" , :locals => {:brand => @brand} %>
-        <div class="jumbotron" id = "main-content">
+        <div class="jumbotron" id = "pg-main-content">
+        <div  class = "container-fluid">
             <div class="row">
                 <%= link_to image_tag ("17.jpg") ,{ :class => 'col-md-12 img-responsive' , :alt => 'Responsive image', :id => "prof-pic"}%>
             </div>
-            <div class ="row">
+            
       <div class="panel panel-default">
           <!-- Default panel contents -->
-          <div class="panel-heading"> بحث‌های متداول
+          <div class="panel-heading"> <b>بحث‌های متداول</b>
           </div>
           <!-- List group -->
-          <ul class="list-group">
+          <ul>
             <% @forum_threads.each do |i| %>
-            <li class="list-group-item">
+            <li class="list-group-item <%= cycle('odd', 'even')%>">
                 
                 <br>
-                <%= link_to i.subject , :action => 'show', :id => i.id %>
+                <div class = "row">
+                <div class=" col-md-11" id="thread_item2">                
+                <%= link_to i.subject , :action => 'show', :id => i.id%>
+                </div>
+                </div>
+                <div class = "row">
+                <div class=" col-md-4">                
+                آخرین تغییرات: <%= i.updated_at%>
+                </div>
+                <div class=" col-md-2">                
+                <%= i.forum_messages.size%> نظر
+                </div>
+                </div>
                 <br>
             </li>
             <% end %>
           </ul>
       </div>
-        </div>
-        <div class=" col-md-5">        
-        <div class="form-group" >
-           <!-- <textarea class="form-control" rows="3" placeholder= " نظر تازه درباره‌ی این آتلیه">
-          </textarea>-->
-          <br><br>
-          
-    <%= form_for(:forum_thread, :url => forum_threads_path) do |f| %>
-
-          <%= f.label :"انتخاب موضوع" %><br>
-          <%= f.text_area :subject , :size => '40x1'%>
-        <div class="actions">
-              
-              <%= f.submit "شروع بحث تازه"%><span class="glyphicon glyphicon-pencil"></span></div>
-          </div>
-          
-      
-    <% end %>
+        
+        <div class=" col-md-2">        
+        
   
+            <button type="button" class="btn btn-default" id= "new-thread-btn" data-toggle="modal" data-target="#suggest-modal">
+  <b>شروع بحث تازه</b>
+      </button>
+      </div>
 
 
-      <p>
+
               
         <!--  <a class="btn btn-primary" role="button" >نگارش<span class="glyphicon glyphicon-pencil"></span> </a>-->
-          </p>
+
         </div>  
     </div>
         </div> 
+
+        <div class="modal fade" id="suggest-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                   <!-- <div class="modal-header">
+                    
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+      </button>
+                        <h4 class="modal-title" id="myModalLabel"><b>انتخاب موضوع مورد بحث</b>
+      </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class ="col-md-6">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="موضوع">
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <br>
+                        <%= form_for(:forum_thread, :url => forum_threads_path) do |f| %>
+          <div class="row">
+            <div class="col-md-8">        
+          <%= f.text_area :subject , :size => '40x1'%></div>
+          
+          <div class=" col-md-3">        
+          <h4 class="modal-title" id="myModalLabel"><b>انتخاب موضوع </b>
+      </h4>
+          </div>
+          </div>
+          
+          <br>
+        <div class="actions ">
+              <div class="row" >
+          <div class="col-md-4">        
+              <%= f.submit "ایجاد بحث تازه"%><span class="glyphicon glyphicon-pencil"></span></div>
+          </div>
+          </div>
+          </div>
+      
+    <% end %>
+
+<!--                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">ایجاد بحث تازه</button>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+  
   </body>
 </html>

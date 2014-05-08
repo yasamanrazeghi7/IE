@@ -1,11 +1,11 @@
 body 
 {
-	background-image: url("../images/backForum.jpg");
-	direction: rtl;
+  background-image: url("../images/backForum.jpg");
+  direction: rtl;
     font-family: tahoma;
-	font-family:'B tabassom',tahoma;
-	font-size: 20px;
-	/*font-family:IranNastaliq,'IranNastaliq',tahoma;*/
+  font-family:'B tabassom',tahoma;
+  font-size: 20px;
+  /*font-family:IranNastaliq,'IranNastaliq',tahoma;*/
 }
 
 #main-content
@@ -18,7 +18,7 @@ body
 
 #contain
 {
-	background-color: blue;
+  background-color: blue;
 }
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus
 {   
@@ -31,18 +31,18 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
 #reg{
-	
+  
 }
 .container {
-	margin-top : 100px;
-	backround-image: inherit;
+  margin-top : 100px;
+  backround-image: inherit;
 }
 .well 
 {
-	background-image: inherit;
-	margin-right : 0px;
-	margin-left : 0px;
-	background-color:#FFF8F8;
+  background-image: inherit;
+  margin-right : 0px;
+  margin-left : 0px;
+  background-color:#FFF8F8;
 }
 .input-group label
 {
@@ -85,12 +85,12 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus
 }
 #inText
 {
-	font-size : 25px;
+  font-size : 25px;
 }
 #pict
 {
-	height : 70px;
-	width : 70px;
+  height : 70px;
+  width : 70px;
 }
 #email
 {
@@ -123,8 +123,8 @@ input[type=text] {
   height:auto;
   width:auto;
   -webkit-border-image:url(../images/border.jpg) 30 30 round; /* Safari 5 */
-	-o-border-image:url(../images/border.jpg) 30 30 round; /* Opera */
-	border-image:url(../images/border.jpg) 30 30 round;
+  -o-border-image:url(../images/border.jpg) 30 30 round; /* Opera */
+  border-image:url(../images/border.jpg) 30 30 round;
   }
 #inimg
   {
@@ -166,4 +166,20 @@ border-image:url(border.png) 30 30 stretch;
 .modal-content
 {
 background : url(../images/back2.jpg);
+}
+
+#thread_item
+{
+list-style: none;
+}
+
+#link_item:hover
+{
+  color:#FF00FF;
+}
+
+#thread_item2:hover{
+    background-color: transparent;
+    color: #34DDDD;
+    text-decoration: none;
 }

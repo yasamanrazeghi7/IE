@@ -11,25 +11,27 @@
   </head>
   <body>
     <%= render "layouts/navbar" , :locals => {:brand => "خدمات"}%>
-        <div class="jumbotron" id = "main-content">
+        <div class="jumbotron" id = "pg-main-content">
             <div class = "row">
-                <div class="col-md-5">
+                <div class="col-md-12" id = "product_description">
                     <div class="panel panel-danger" id ="box">
                         <div class="panel-heading">
                             <h3 class="panel-title">
                           <b>
-                       		<%=@product.name%>
+                          <%=@product.name%>
         </b>
                             </h3>
                         </div>
                         <div class="panel-body">
                           <p> 
-				<%=@product.description%>
+        <%=@product.description%>
         </p>
                         </div>
                     </div>
-                </div>
-                <div class = "col-md-7">
+                </div></div>
+                <br><br>
+                <div class = "row">
+                <div class = "col-md-12">
       <div id="carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -63,16 +65,20 @@
   </div>
 
 <br>
-    <div class="btn-group ">
-            <button type="button" class="btn btn-default" id= "new-msg-btn" data-toggle="modal" data-target="#suggest-modal">
+<div class = "row">
+
+    <div class="btn-group col-md-1 col-md-offset-2">
+            <button type="button" class="btn btn-default " id= "new-msg-btn" data-toggle="modal" data-target="#suggest-modal">
   <b>پیشنهاد به دوستان</b>
       </button>
-            <button type="button" class="btn btn-default" id="new-msg-btn">
+      <!--
+            <button type="button" class="btn btn-default " id="new-msg-btn">
   <b>دوست نداشتم</b>
       </button>
-            <button type="button" class="btn btn-default" id="new-msg-btn"> 
+            <button type="button" class="btn btn-default " id="new-msg-btn"> 
   <b>دوست داشتم</b>
-      </button>
+      </button>-->
+        </div>
         </div>
         <hr>
   <%= render :partial => '/comments/comment_product' , :locals =>{:com => @comments, :newCom => @newComment, :prod => @product}  %>
