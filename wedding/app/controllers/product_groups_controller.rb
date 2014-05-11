@@ -1,6 +1,5 @@
 class ProductGroupsController < ApplicationController
   before_action :set_product_group, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
   # GET /product_groups
   # GET /product_groups.json
   def index

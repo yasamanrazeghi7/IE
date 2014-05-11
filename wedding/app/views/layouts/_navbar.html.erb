@@ -21,11 +21,24 @@
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
-                            	<li> <%= link_to "پروفایل ما", current_user.profile %></li>
+                            	<li> <%= link_to "پروفایل ما", current_user.try(:profile) %></li>
 								<li><a href="#">پیام‌ها</a></li>
 								<li><a href="#">محیط برنامه‌ریزی</a></li>
                                 <li class="divider"></li>
-								<li><a href="#">خروج</a></li>
+	   							<li>
+                                <%=
+                                button_to "Sign Out", destroy_user_session_path, :method => :delete
+                                %>                                  
+                                </li>
+
+                                <li>
+                                <%= 
+                                    if current_user.try(:admin)    
+                                         link_to "اضافه", new_product_path
+                                    end  
+                                %>
+                                </li>
+                               
                             </ul>
                         </li>
                     </ul>

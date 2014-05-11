@@ -21,6 +21,8 @@ class ProfilesController < ApplicationController
   def edit
   end
 
+
+
   # POST /profiles
   # POST /profiles.json
   def create
@@ -69,6 +71,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:brideName, :groomName, :userName, :photo, :ceremonyDate, :aboutUs)
+      params.require(:profile).permit(:brideName, :groomName, :userName, :photo, :ceremonyDate, :aboutUs, :avatar)
     end
 end

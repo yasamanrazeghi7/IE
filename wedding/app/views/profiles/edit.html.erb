@@ -1,6 +1,99 @@
-<h1>Editing profile</h1>
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+	<head>
+		<title>Edit Form</title>
+		<meta charset='utf-8' />
+		<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+		<meta name="language" content="en" />
+		<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/signup.css" />
+    	<link rel="stylesheet" href="css/font.css" />
+	</head>
+	<body id="editProfile">
+	<%= form_for(@profile) do |f| %> 
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
 
-<%= render 'form' %>
+      <ul>
+      <% @profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+        <div class="well" id="edit_page_container">    
+     	    <div class="container-fluid">
+                <form id="signup" class="form-horizontal" role="form">
+            		<legend id="editReg">ویرایش اطلاعات</legend>			        	    
+                <div class= "col-md-7 ">        	            
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-5">
+                                <%= f.text_field :brideName %>
+                            </div>
+	        	            <div class ="col-sm-3" >
+	        	            	 <%= f.label "نام عروس" %><br />
+                                <!-- <label class="control-label">گذرواژه</label> -->
+	        	            </div>
+                      </div>    	        	            
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-5">
+                                <!--<input type=	"password" class="form-control"> -->
+                                <%= f.text_field :groomName %>
+                            </div>
+	        	            <div class ="col-sm-3">
+                                <!-- <label class="control-label">تکرار گذرواژه</label> -->
+                                 <%= f.label "نام داماد"%><br />
+	        	            </div>
+                        </div>
 
-<%= link_to 'Show', @profile %> |
-<%= link_to 'Back', profiles_path %>
+                        <div class="row form-group">
+	        	            <div class=" col-sm-9">
+                                <!--<input type=	"password" class="form-control"> -->
+                                <%= f.date_select :ceremonyDate %>
+                            </div>
+	        	            <div class ="col-sm-3">
+                                <!-- <label class="control-label">تکرار گذرواژه</label> -->
+                                 <%= f.label "تاریخ مراسم"%><br />
+	        	            </div>
+                        </div>
+
+                        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-5">
+                                <!--<input type=	"password" class="form-control"> -->
+                               <%= f.text_area :aboutUs %>
+                            </div>
+	        	            <div class ="col-sm-3">
+                                <!-- <label class="control-label">تکرار گذرواژه</label> -->
+                                 <%= f.label "درباره‌ی ما"%><br />
+	        	            </div>
+                        </div>
+
+                        <div class="row form-group">
+	        	            <div class="col-sm-offset-3 col-sm-6"> 
+                               <%= f.file_field :avatar %> 
+                          </div>
+	        	            <div class ="col-sm-3" >
+                               <%= f.label "عکس" %><br />
+	        	            </div>
+                      	</div>
+
+                      	<div class="row form-group">
+	        	            <div class ="row col-md-offset-4 col-md-1 col-md-9 "  id ="edit_btns">
+	        	            	<%= f.submit "ذخیره" ,:class=> 'col-sm-3 btn btn-success btn-block edit_butt' %>
+	        	            </div>
+                      </div>        	  
+                        	            
+	                    
+	        	    </div>
+	        	</form>
+	        </div>	
+	    <div>
+	    <% end %>
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script src="js/signup.js"></script>
+		</body>
+    
+</html> 
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html class='no-js' lang='en'>
 	<head>
 		<title>Wedding Planner</title>
@@ -19,12 +19,12 @@
         <%= link_to image_tag ("7.jpg") %>
         <%= link_to image_tag ("8.jpg") %>
 		</div>
-		<div id="signup-nav">
+		<div id="signup-nav"> -->
         <!--
             <div id = "start" >
                <span class="glyphicon glyphicon-chevron-right"></span>
             </div> -->
-            <div class="btn-group-vertical" id="start-btn">
+          <!--  <div class="btn-group-vertical" id="start-btn">
                 <button  class="btn btn-sm btn-primary trans" type="button" id = "signup-btn" onclick="window.open('signup.html')">
                     ثبت‌نام
                 </button>
@@ -80,3 +80,4 @@
         </div>
   </body>
 </html>
+-->
