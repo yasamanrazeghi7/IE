@@ -1,0 +1,51 @@
+        <nav class="navbar navbar-fixed-top wed-nav" role="navigation">
+            <div class="container-fluid">
+                    <div class="navbar-brand" ><%= locals[:brand] %></div>
+                    <%= form_tag '/welcome/search', :method => :get , :class => "navbar-form navbar-left"   do%>
+                    <%= text_field_tag :q , nil ,:class =>"form-control" , :placeholder => "جست‌وجو"%>
+                    <%= submit_tag 'پیدا کن!' , :class => "btn btn-default"%>
+                    <%end%>
+                    
+                    <ul class="nav navbar-nav navbar-right" >
+                        <li> <a <%= link_to "خدمات", product_groups_path %> </a> </li>
+<!--                        <li><a href="goods.html">خدمات</a></li> -->
+                          
+                        <li> <a <%= link_to "انجمن", forum_threads_path %> </a> </li>
+                        <li class="dropdown" id="test">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">عروسی ما
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+<<<<<<< HEAD
+                            	<li> <%= link_to "پروفایل ما", current_user.try(:profile) %></li>
+								<li><a href="#">پیام‌ها</a></li>
+								<li><a href="#">محیط برنامه‌ریزی</a></li>
+                                <li class="divider"></li>
+	   							<li>
+                                <%=
+                                button_to "Sign Out", destroy_user_session_path, :method => :delete
+                                %>                                  
+                                </li>
+
+                                <li>
+                                <%= 
+                                    if current_user.try(:admin)    
+                                         link_to "اضافه", new_product_path
+                                    end  
+                                %>
+                                </li>
+                               
+=======
+                                <li> <%= link_to "پروفایل ما", current_user.profile %></li>
+                                <li><a href="#">پیام‌ها</a></li>
+                                <li><a href="#">محیط برنامه‌ریزی</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">خروج</a></li>
+>>>>>>> 9f1a438fad44e6dae16894b4890d25059b17c7c3
+                            </ul>
+                        </li>
+                    </ul>
+                
+            </div>
+        </nav>
+

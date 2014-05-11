@@ -1,30 +1,4 @@
-<!--
-<h1>Listing product_groups</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @product_groups.each do |product_group| %>
-      <tr>
-        <td><%= link_to 'Show', product_group %></td>
-        <td><%= link_to 'Edit', edit_product_group_path(product_group) %></td>
-        <td><%= link_to 'Destroy', product_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Product group', new_product_group_path %>
--->
 <!DOCTYPE html>
 <html class='no-js' lang='en'>
   <head>
@@ -35,45 +9,218 @@
   </head>
   <body>
     <%= render "layouts/navbar" , :locals => {:brand => "خدمات"}%>
-    <div class="jumbotron" id = "main-content">
-    <div class="table-responsive">
-      <table class="table table-condensed " id = "inCon">
-          <h1><b>عروس و داماد</b></h1>
-          <br>
-          <tr class="danger" id = "inCon">
-              <td class="col-md-4 success" id = "inCon" >
-                <div align="center"> <%= link_to image_tag ("12.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
-              </td>
-              <td class="col-md-4 success td-responsive" id = "inCon" >
-                  <div align="center"> <%= link_to image_tag ("13.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
-              </td>
-              
+    <div class="jumbotron container-fluid" id = "pg-main-content">
+      <div class = "container-fluid">
+      <div class = "row" align ="center">
+        <h1 id ="pg-h1"> عروس و داماد </h1>
+        <hr class = "style-seven">
+      </div>
+      <div class="col-md-4 success container-fluid" id="pg-item" >
+        <div align="center"> 
+          <div class = "row" id = "pg-itm-pic">
+            <%= link_to (image_tag ("12.jpg") ,{:class => 'img-responsive' , :alt => 'Responsive image'}), {:action => 'show', :name => "خدمات آرایشی"} %>
+          </div>
+          <div class = "row">
+            <span class="glyphicon glyphicon-eye-open"></span>
+            خدمات آرایشی
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 success container-fluid" id="pg-item" >
+        <div align="center"> 
+          <div class = "row" id = "pg-itm-pic">
+            <%= link_to (image_tag ("13.jpg") ,{:class => 'img-responsive' , :alt => 'Responsive image'}), {:action => 'show', :name => "آتلیه‌های عکاسی"} %>
+          </div>
+          <div class = "row">
+            <span class="glyphicon glyphicon-camera"></span>
+            آتلیه عکاسی
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 success container-fluid" id="pg-item" >
+        <div align="center"> 
+          <div class = "row" id = "pg-itm-pic">
+            <%= link_to (image_tag ("18.jpg") ,{:class => 'img-responsive' , :alt => 'Responsive image'}), {:action => 'show', :name => "jewels"} %>
+          </div>
+          <div class = "row">
+            <span class="glyphicon glyphicon-gift"></span>
+            جواهرات
+          </div>
+        </div>
+      </div>
+      <!-- **********************************************-->
+      <div class="col-md-4 success container-fluid" id="pg-item" >
+        <div align="center"> 
+          <div class = "row" id = "pg-itm-pic">
+            <%= link_to (image_tag ("9.jpg") ,{:class => 'img-responsive' , :alt => 'Responsive image'}), {:action => 'show', :name => "car"} %>
+          </div>
+          <div class = "row">
+            <span class="glyphicon glyphicon-road"></span>
+            اتومبیل عروس
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 success container-fluid" id="pg-item" >
+        <div align="center"> 
+          <div class = "row" id = "pg-itm-pic">
+            <%= link_to (image_tag ("19.jpg") ,{:class => 'img-responsive' , :alt => 'Responsive image'}), {:action => 'show', :name => "dress"} %>
+          </div>
+          <div class = "row">
+            <span class="glyphicon glyphicon-user"></span>
+            لباس
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 success container-fluid" id="pg-item" >
+        <div align="center"> 
+          <div class = "row" id = "pg-itm-pic">
+            <%= link_to (image_tag ("17.jpg") ,{:class => 'img-responsive' , :alt => 'Responsive image'}), {:action => 'show', :name => "flower"} %>
+          </div>
+          <div class = "row">
+            <span class="glyphicon glyphicon-leaf"></span>
+            گل و تزیینات
+          </div>
+        </div>
+      </div>
+    </div>
+        <hr class = "style-seven">
+
+           <div class="carousel slide center" data-ride="carousel" align="center">
+            <ol class="carousel-indicators" margin: auto>
+              <li data-target="#carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel" data-slide-to="1" ></li>
+              <li data-target="#carousel" data-slide-to="2" ></li>
+              <li data-target="#carousel" data-slide-to="3" ></li>
+            </ol>
+            <div class="carousel-inner" margin: auto>
+              <div class="item active">
+                <%=link_to image_tag("22.jpg", :alt => "Slide1"), {:class => "img-responsive", :alt => "Responsive image"} %>       
+              </div>
+              <div class="item">
+                <%=link_to image_tag("33.jpg", :alt => "Slide2"), {:class => "img-responsive", :alt => "Responsive image"} %>
+              </div>
+              <div class="item">
+                <%=link_to image_tag("34.jpg", :alt => "Slide3"), {:class => "img-responsive", :alt => "Responsive image"} %>
+              </div>
+              <div class="item">
+                <%=link_to image_tag("35.jpg", :alt => "Slide4"), {:class => "img-responsive", :alt => "Responsive image"} %>
+              </div>     
+            </div>
+      </div>
+
+
+      <div class ="container-fluid">
+        <div class = "row" align ="center">
+          <h1 id ="pg-h1"> مراسم </h1>
+          <hr class = "style-seven">
+        </div>
+        <div class="col-md-4 success container-fluid" id="pg-item" >
+          <div align="center"> 
+            <div class = "row" id = "pg-itm-pic">
+              <%= link_to (image_tag ("14.jpg") ,{:class => 'img-responsive' , :alt => 'Responsive image'}), {:action => 'show', :name => "makeup"} %>
+            </div>
+            <div class = "row">
+              <span class="glyphicon glyphicon-music"></span>
+              موسیقی
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 success container-fluid" id="pg-item" >
+          <div align="center"> 
+            <div class = "row" id = "pg-itm-pic">
+              <%= link_to (image_tag ("20.jpg") ,{:class => 'img-responsive' , :alt => 'Responsive image'}), {:action => 'show', :name => "photography"} %>
+            </div>
+            <div class = "row">
+              <span class="glyphicon glyphicon-glass"></span>
+              سالن مراسم
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 success container-fluid" id="pg-item" >
+          <div align="center"> 
+            <div class = "row" id = "pg-itm-pic">
+              <%= link_to (image_tag ("15.jpg") ,{:class => 'img-responsive' , :alt => 'Responsive image'}), {:action => 'show', :name => "jewels"} %>
+            </div>
+            <div class = "row">
+              <span class="glyphicon glyphicon-send"></span>
+              کارت دعوت
+            </div>
+          </div>
+        </div>
+        <!-- **********************************************-->
+        <div class="col-md-4 success container-fluid" id="pg-item" >
+          <div align="center"> 
+            <div class = "row" id = "pg-itm-pic">
+              <%= link_to (image_tag ("16.jpg") ,{:class => 'img-responsive' , :alt => 'Responsive image'}), {:action => 'show', :name => "car"} %>
+            </div>
+            <div class = "row">
+              <span class="glyphicon glyphicon-cutlery"></span>
+              پذیرایی و غذا
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 success container-fluid" id="pg-item" >
+          <div align="center"> 
+            <div class = "row" id = "pg-itm-pic">
+              <%= link_to (image_tag ("10.jpg") ,{:class => 'img-responsive' , :alt => 'Responsive image'}), {:action => 'show', :name => "dress"} %>
+            </div>
+            <div class = "row">
+              <span class="glyphicon glyphicon-heart-empty"></span>
+              کیک و شیرینی
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 success container-fluid" id="pg-item" >
+          <div align="center"> 
+            <div class = "row" id = "pg-itm-pic">
+              <%= link_to (image_tag ("11.jpg") ,{:class => 'img-responsive' , :alt => 'Responsive image'}), {:action => 'show', :name => "flower"} %>
+            </div>
+            <div class = "row">
+              <span class="glyphicon glyphicon-heart"></span>
+              سفره‌ی عقد
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+    </div>  
+ <!--             <div class="col-md-4 success td-responsive" >
+           <div class="carousel slide center" data-ride="carousel" align="center">
+            <ol class="carousel-indicators" margin: auto>
+              <li data-target="#carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel" data-slide-to="1" ></li>
+              <li data-target="#carousel" data-slide-to="2" ></li>
+              <li data-target="#carousel" data-slide-to="3" ></li>
+            </ol>
+            <div class="carousel-inner" margin: auto>
+              <div class="item active">
+                <%=link_to image_tag("22.jpg", :alt => "Slide1"), {:class => "img-responsive", :alt => "Responsive image"} %>       
+              </div>
+              <div class="item">
+                <%=link_to image_tag("33.jpg", :alt => "Slide2"), {:class => "img-responsive", :alt => "Responsive image"} %>
+              </div>
+              <div class="item">
+                <%=link_to image_tag("34.jpg", :alt => "Slide3"), {:class => "img-responsive", :alt => "Responsive image"} %>
+              </div>
+              <div class="item">
+                <%=link_to image_tag("35.jpg", :alt => "Slide4"), {:class => "img-responsive", :alt => "Responsive image"} %>
+              </div>     
+            </div>
+      </div>
+
+
+
           </tr>
-          <tr class="danger" id="inCon"> 
-            <td class="col-md-4 success td-responsive" id = "inCon" >
-                <%= link_to "خدمات آرایشی" ,:action => 'show', :name =>"makeup" %>
-                  <span class="glyphicon glyphicon-eye-open"></span>
-                </td>
-            <td class="col-md-4 success" id = "inCon">
-                <%= link_to "آتلیه عکاسی" ,:method => :get,:action => 'show', :name =>"photography"%>
-                  <span class="glyphicon glyphicon-camera"></span> 
-            </td>
-            
-          </tr>
           <tr class="danger" id = "inCon">
-              <td class="col-md-4 success" id = "inCon" >
-                <div align="center"> <%= link_to image_tag ("18.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
-              </td>
               <td class="col-md-4 success td-responsive" id = "inCon" >
                   <div align="center"> <%= link_to image_tag ("9.jpg") ,{ :class => 'img-responsive' , :alt => 'Responsive image'}%></div>
               </td>
               
           </tr>
           <tr class="danger" id="inCon"> 
-            <td class="col-md-4 success td-responsive" id = "inCon" >
-                <%= link_to "جواهرات" ,:method => :get,:action => 'show', :name =>"jewels" %>
-                  <span class="glyphicon glyphicon-gift"></span>
-            </td>
             <td class="col-md-4 success" id = "inCon">
                 <%= link_to "اتومبیل عروس" ,:method => :get,:action => 'show', :name =>"car" %>
                   <span class="glyphicon glyphicon-road"></span> 
@@ -106,31 +253,6 @@
     <div>
             
 
-            <div id="carousel" class="carousel slide center" data-ride="carousel" align="center">
-        <ol class="carousel-indicators" margin: auto>
-          <li data-target="#carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel" data-slide-to="1" ></li>
-          <li data-target="#carousel" data-slide-to="2" ></li>
-          <li data-target="#carousel" data-slide-to="3" ></li>  
-          
-        </ol>
-        <div class="carousel-inner" margin: auto>
-          <div class="item active">
-            <%=link_to image_tag("22.jpg", :alt => "Slide1"), {:class => "img-responsive", :alt => "Responsive image"} %>       
-          </div>
-          <div class="item">
-            <%=link_to image_tag("33.jpg", :alt => "Slide2"), {:class => "img-responsive", :alt => "Responsive image"} %>
-          </div>
-          <div class="item">
-            <%=link_to image_tag("34.jpg", :alt => "Slide3"), {:class => "img-responsive", :alt => "Responsive image"} %>
-          </div>
-          <div class="item">
-            <%=link_to image_tag("35.jpg", :alt => "Slide4"), {:class => "img-responsive", :alt => "Responsive image"} %>
-          </div>
-          
-        </div>
-        
-                  </div>
 
       </div>
     <div class="table-responsive">
@@ -200,6 +322,6 @@
               </tr>           
           </table>
       </div>
-        </div>        
+        </div> -->       
   </body>
 </html>

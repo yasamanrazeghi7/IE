@@ -12,6 +12,7 @@ class ProductGroupsController < ApplicationController
   def show
     @pros = ProductGroup.find_products(params[:name])
     @brand = params[:name] 
+    @pic = ProductGroup.find_header_photo(params[:name])
 
   end
 

@@ -11,12 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20140505112051) do
 
   create_table "comments", force: true do |t|
     t.text     "content"
     t.integer  "product_id"
     t.integer  "user_id"
+  end
+
+  create_table "forum_messages", force: true do |t|
+    t.integer  "forum_thread_id"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forum_threads", force: true do |t|
+    t.string   "subject"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140505112051) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "header_photo"
   end
 
   create_table "products", force: true do |t|

@@ -4,7 +4,6 @@ fa:
       confirmed: حسابتان با موفقیت تایید شد. هم اکنون وارد شدید.
       send_instructions: ظرف چند دقیقه آینده ایمیلی حاوی راهنمای تایید حسابتان دریافت خواهید کرد.
       send_paranoid_instructions: اگر ایمیل شما قبلا در سیستم ثبت شده باشد، تا چند دقیقه‌ی دیگر یک ایمیل حاوی توضیحات چگونگی فعال‌سازی حساب‌تان دریافت می‌کنید.
-      remember_me: مرا به خاطر بسپار
     failure:
       already_authenticated: وارد سیستم هستید.
       inactive: حساب شما هنوز فعال نشده است.
@@ -14,12 +13,10 @@ fa:
       not_found_in_database: ایمیل یا رمزعبور نامعتبر.
       timeout: نشست شما منقضی شده است. برای ادامه دوباره وارد شوید.
       unauthenticated: پیش از ادامه باید وارد شوید یا ثبت نام کنید.
-      unconfirmed: باید حسابتان را قبل از ادامه تایید کنید.
-      remember_me: مرا به خاطر بسپار
+      unconfirmed: باید حسابتان را قبل از ادامه تایید کنید
     mailer:
       confirmation_instructions:
         subject: راهنمای تایید
-        remember_me: مرا به خاطر بسپار
       reset_password_instructions:
         subject: راهنمای بازنشانی رمز عبور
       unlock_instructions:

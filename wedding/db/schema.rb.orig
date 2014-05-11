@@ -12,20 +12,60 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140419072137) do
+ActiveRecord::Schema.define(version: 20140505112051) do
+=======
+ActiveRecord::Schema.define(version: 20140508112252) do
+>>>>>>> 9f1a438fad44e6dae16894b4890d25059b17c7c3
+
+  create_table "comments", force: true do |t|
+    t.text     "content"
+    t.integer  "product_id"
+<<<<<<< HEAD
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+=======
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forum_messages", force: true do |t|
+    t.integer  "forum_thread_id"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forum_threads", force: true do |t|
+    t.string   "subject"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+>>>>>>> 9f1a438fad44e6dae16894b4890d25059b17c7c3
+  end
+
+  create_table "messages", force: true do |t|
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "product_groups", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "header_photo"
   end
 
   create_table "products", force: true do |t|
     t.text     "description"
     t.string   "photo_album"
     t.integer  "product_group_id"
-=======
-ActiveRecord::Schema.define(version: 20140420062713) do
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
 
   create_table "profiles", force: true do |t|
     t.string   "brideName"
@@ -35,29 +75,28 @@ ActiveRecord::Schema.define(version: 20140420062713) do
     t.date     "ceremonyDate"
     t.text     "aboutUs"
     t.integer  "user_id"
->>>>>>> e122558b4e8c4eae56c1aa4ec16c151c231e12e3
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username"
-    t.string   "brideName"
-    t.string   "groomName"
-    t.string   "brideEmail"
-    t.string   "groomEmail"
+    t.boolean  "admin",                  default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

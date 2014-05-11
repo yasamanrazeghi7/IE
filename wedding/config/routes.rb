@@ -1,4 +1,8 @@
 Wedding::Application.routes.draw do
+  resources :forum_messages
+
+  resources :forum_threads
+
   resources :comments
 
   resources :messages
@@ -15,6 +19,7 @@ Wedding::Application.routes.draw do
 
   get "welcome/show"
   get "welcome/index"
+  get "welcome/search"
   root :to => "welcome#index"
   devise_for :users
   get "product_groups", :to => "product_groups#index"
