@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+<style> 
+    body
+    {
+      direction: rtl;
+    }
+</style>
+  </head>
+  <body>
+    <h1> <%= @name %> سلام، </h1>
+    <p>
+     به شما پیشنهاد شده است. <%= @sender_name %>  از طرف  <%= @product_name %>
+    <br>
+     برای اطلاعات بیشتر به لینک زیر مراجعه کنید.
+     
+     متن پیام دوست‌تان برای شما:
+     <br>
+      <%= @msg %>
+    </p>
+  </body>
+</html>

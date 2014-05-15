@@ -87,11 +87,11 @@ hr.style-seven:before { /* Not really supposed to work, but does */
 }
 #new-msg-btn
 {
-    background-color: #CE91B6;
-    border-color:#823463;
+    background-color: #BCD4E6;
+    border-color:###80A4C0;
 }
 #new-msg-btn:hover{
-    background-color:#A85D8A;
+    background-color:#80A4C0;
 }
 #imgs
 {

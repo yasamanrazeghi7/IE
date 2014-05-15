@@ -10,11 +10,11 @@
     <link href="css/font.css" rel="stylesheet">
   </head>
   <body>
-    <%= render "layouts/navbar" , :locals => {:brand => "خدمات"}%>
+    <%= render "layouts/navbar" , :locals => {:brand => ""}%>
         <div class="jumbotron" id = "pg-main-content">
             <div class = "row">
                 <div class="col-md-12" id = "product_description">
-                    <div class="panel panel-danger" id ="box">
+                    <div class="panel panel-info" id ="box">
                         <div class="panel-heading">
                             <h3 class="panel-title">
                           <b>
@@ -80,11 +80,16 @@
       </button>-->
         </div>
         </div>
+        <div class ="row">
+          <div class = "col-md-4 col-md-offset-6">
+          این محصول تا به حال <%= @product.suggestions %>بار پیشنهاد شده‌است.
+        </div>
+        </div>
         <hr>
   <%= render :partial => '/comments/comment_product' , :locals =>{:com => @comments, :newCom => @newComment, :prod => @product}  %>
        </div>
   </div>
-        </div>
+        </div> 
   <div class="modal fade" id="suggest-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -95,29 +100,38 @@
       </h4>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <div class ="col-md-6">
-                                <div class="input-group">
+                      <%= form_tag "/products/send_email" do %>
+                        <%= hidden_field_tag 'p_name', @product.name%>
+                        <%= hidden_field_tag 'p_id', @product.id%>
+                        <div class="form-group">
+                            <%= label_tag 'name', 'نام گیرنده' %>
+                            <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'نام گیرنده' %>
+                        </div>
+                         <div class="form-group">
+                           <%= label_tag 'email', 'پست الکترونیکی گیرنده' %>
+                           <%= email_field_tag 'email', nil, class: 'form-control', placeholder: 'پست الکترونیکی گیرنده' %>
+                       </div>
+                       <div class="form-group">
+                           <%= label_tag 'msg', 'پیام شما' %>
+                           <%= text_area_tag 'msg', nil, class: 'form-control', rows: 4, placeholder: 'پیام شما' %>
+                       </div>
+                       <div class="modal-footer">
+                         <%= submit_tag 'ارسال', class: 'btn btn-success' %>
+                        </div>
+                   <% end %>
+                      <!--          <div class="input-group">
                                     <input type="text" class="form-control" placeholder="گیرنده">
                                 </div>
-                            </div>
-                        </div>
+                                <div class="input-group" >
+                                    <input type="text" class="form-control" rows = "2"placeholder="متن پیشنهاد">
+                                </div>
+                      -->
+                            
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-success">ارسال</button>
-                    </div>
+                  
                 </div>
             </div>
         </div>
-    
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>     
-    <script src="https://code.jquery.com/jquery.js"></script>
-    
-        <script>
-            $("#carousel").carousel();
-        </script>
-  
   </body>
 </html>
 

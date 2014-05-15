@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
   has_one :profile 
   has_many :comments, :foreign_key => 'user_id'
   has_many :forum_messages, :foreign_key => 'user_id'
+  has_many :messages
 end
 

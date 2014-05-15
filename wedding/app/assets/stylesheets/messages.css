@@ -14,14 +14,6 @@ body
     margin-top:100px;
     background-color:#EFDECD;
 }
-#new-msg-btn
-{
-    background-color: #CE91B6;
-    border-color:#823463;
-}
-#new-msg-btn:hover{
-    background-color:#A85D8A;
-}
 #del-msg-btn
 {
     background-color: #DEDEDC;

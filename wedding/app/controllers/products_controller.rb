@@ -14,11 +14,21 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-
-
     @comments = Comment.where(:product_id => params[:id])
     @newComment = Comment.new
 
+  end
+
+  def send_email
+    name = params[:name]
+    email = params[:email]
+    msg = params[:msg]
+    product = params[:p_name]
+    pro = Product.where(:id=>params[:p_id]).first
+    pro.suggestions = pro.suggestions + 1 
+    pro.save
+    SuggestMailer.suggestion_email(email,product,name,msg,current_user.email).deliver
+    redirect_to :back 
   end
 
   # GET /products/new

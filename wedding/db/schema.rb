@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508112252) do
+ActiveRecord::Schema.define(version: 20140515052256) do
 
   create_table "comments", force: true do |t|
     t.text     "content"
@@ -39,6 +39,11 @@ ActiveRecord::Schema.define(version: 20140508112252) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.integer  "message_id"
+    t.string   "subject"
+    t.string   "receiver"
   end
 
   create_table "product_groups", force: true do |t|
@@ -55,6 +60,7 @@ ActiveRecord::Schema.define(version: 20140508112252) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.integer  "suggestions"
   end
 
   create_table "profiles", force: true do |t|

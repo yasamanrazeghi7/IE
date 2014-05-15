@@ -1,7 +1,7 @@
 <div class = "container-fluid">
 <div class = "row">   
     <div class="col-md-12">
-        <div class="panel panel-danger">
+        <div class="panel panel-info">
           <div class="panel-heading">
           <b><%= thread.subject%></b>
           </div>
@@ -14,7 +14,7 @@
                 <div class = "row">
                   <div class="col-md-10"><%=simple_format("  ")%><%= comment.user.profile.groomName%>  و  <%= comment.user.profile.brideName%>
                   </div>
-                  <div class="col-md-1"><%= link_to image_tag (comment.user.profile.photo) ,{ :width => 100, :height => 80, :class => 'img-responsive' , :alt => 'Responsive image'}%> 
+                  <div class="col-md-1"><%= image_tag comment.user.profile.photo ,{ :width => 100, :height => 80, :class => 'img-responsive' , :alt => 'Responsive image'}%> 
                   </div>
                 </div>
                 <div class = "row">

@@ -12,6 +12,7 @@ Wedding::Application.routes.draw do
 
   resources :product_groups
 
+  post "products/send_email", :to => "products#send_email"
   get "welcome/show"
   get "welcome/index"
   get "welcome/search"

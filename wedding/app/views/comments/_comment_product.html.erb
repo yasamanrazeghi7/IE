@@ -9,10 +9,12 @@
     <%= form_for(:comment, :url => comments_path) do |f| %>
 
           <%= f.label :"نظر تازه" %><br>
-          <%= f.text_area :content , :size => '103x1'%>
+          <%= f.text_area :content , :size => '74x1'%>
         <div class="actions">
               <%= f.hidden_field :product_id, :value => prod.id %>
-              <%= f.submit "نگارش"%><span class="glyphicon glyphicon-pencil"></span></div>
+              <%= f.submit "نگارش" %><span class="glyphicon glyphicon-pencil"></span>
+              
+            </div>
           </div>
           
       
@@ -33,7 +35,7 @@
 
 <div class = "row">   
     <div class="col-md-12" id = "product_description">
-        <div class="panel panel-danger">
+        <div class="panel panel-info">
           <div class="panel-heading">
           <b>نظرات</b>
           </div>
@@ -48,7 +50,7 @@
                   </div>
                   </b>
                   <br>
-                  <div class="col-md-1"><%= link_to image_tag (comment.user.profile.photo) ,{ :width => 100, :height => 80, :class => 'img-responsive' , :alt => 'Responsive image'}%> 
+                  <div class="col-md-1"><%= image_tag comment.user.profile.photo ,{ :width => 100, :height => 80, :class => 'img-responsive' , :alt => 'Responsive image'}%> 
                   </div>
                 </div>
                 <div class = "row">
