@@ -47,16 +47,20 @@
   </head>
   <body id = "" align="center">
     <div id="profile_background" >
-      <!--<%= link_to image_tag ("41.jpg") , :class => "stretch" %> -->
-      <%= link_to image_tag ("home.jpg") , :class => "stretch" %>
-      <%= link_to image_tag ("head.png") , :class => "stretch" %>
+      <!--<%= link_to image_tag ("41.jpg") , :class => "stretch" %> 
+      <%= link_to image_tag ("home.jpg") , :class => "stretch" %> -->
+      <%= link_to image_tag ("love.png") , :class => "stretch" %> 
     </div>
       <%= render "layouts/navbar" , :locals => {:brand => "پروفایل ما"}%>
-        <div class="col-md-offset-2 col-md-8 col-md-offset-2 jumbotron " id = "profile_main-content">
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2 jumbotron " align = "center" id = "profile_main-content">
+        <div class = "col-md-offset-2 col-md-8 col-md-offset-2" align="center">
+          <!--              <%= link_to image_tag (@profile.photo)  %> -->
+          <%= link_to image_tag ("images.jpg") , :class => "stretch" %> 
+        </div>
             <div class = "row">
-                <div class="col-md-9">
-                    <div class="panel panel-danger" id ="box">
-                        <div class="panel-heading">
+                <div class="col-md-offset-2 col-md-8 col-md-offset-2" aligh = "center"> 
+                    <div class=" panel panel-info" aligh = "center" aligh = "center">
+                        <div class="panel-heading" alighn = "center">
                             <h3 class="panel-title row">
                                 <div class="col-md-5" id = "profile_desc">
                                   تاریخ ازدواج: <%= @profile.ceremonyDate %>
@@ -76,16 +80,13 @@
                          </div>
                     </div>
                 </div>
-                <div class = "col-md-3" align="center">
-                    
-                        <%= link_to image_tag (@profile.photo)  %>
-                        
-                </div>
+                <!--
+                 -->
             </div>
             <br>
             <br>
             <div class="row container" id = "foott">
-                <a>
+                <a> 
                 <div align="center">
                     <%= button_to  "ویرایش اطلاعات", edit_profile_path, :class => 'btn btn-primary', :type=>'button',  :method => :get%> </a>
                     <!-- <a class="btn btn-primary" role="button" id ="new-msg-btn">ویرایش اطلاعات</a> 
@@ -94,7 +95,7 @@
                     <div class = "col-md-1"
                 <a>
                     </div>
-            </div>
+            </div> 
 
 
       
