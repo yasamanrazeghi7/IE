@@ -11,6 +11,11 @@ Wedding::Application.routes.draw do
   resources :profiles
 
   resources :product_groups
+ #
+ # authenticated :admin do
+  #  if current_user.try(:admin)
+   #   root :to => 'admin/dashboard#show'
+   # end
 
   post "products/send_email", :to => "products#send_email"
   get "welcome/show"
@@ -21,6 +26,7 @@ Wedding::Application.routes.draw do
   get "product_groups", :to => "product_groups#index"
   get "product_groups/show", :to => "product_groups#show"
   get "products/show", :to => "products#show"
+  get "devise/product_groups", :to=> "product_groups#show"
   
   resources :product_groups do
     resources :products
@@ -81,10 +87,12 @@ Wedding::Application.routes.draw do
   #   end
   devise_scope :user do
  	 get "sign_in", to: "devise/sessions#new"
-   get "sign_out" => "devise/sessions#destroy"
+   get "sign_out" , to: "devise/sessions#destroy"
   end
   get "profile", to: "profiles#index"
   get "profiles/show", to: "profiles#index"
+
+
   #devise_for :users do
   #get "welcome" => "devise/registrations#new", :as => :new_user_registration
   #get "account_settings" => "devise/registrations#edit"

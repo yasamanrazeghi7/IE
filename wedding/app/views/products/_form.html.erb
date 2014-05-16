@@ -19,6 +19,27 @@
     <%= f.label :photo_album %><br>
     <%= f.text_field :photo_album %>
   </div>
+
+
+
+ <%= f.fields_for :product_group do |ff| %>
+  <div>
+    <%= ff.label :product_group %>
+    <%= ff.number_field :product_group_id %>
+  </div>
+ <% end %>
+
+
+
+  <div class="field">
+    <%= f.label :product_group %><br>
+    <%= f.number_field :product_group_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :product_name %><br>
+    <%= f.text_field :name %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,0 +1,127 @@
+<!--
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bridename:</strong>
+  <%= @profile.brideName %>
+</p>
+
+<p>
+  <strong>Groomname:</strong>
+  <%= @profile.groomName %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @profile.userName %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @profile.photo %>
+</p>
+
+<p>
+  <strong>Ceremonydate:</strong>
+  <%= @profile.ceremonyDate %>
+</p>
+
+<p>
+  <strong>Aboutus:</strong>
+  <%= @profile.aboutUs %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %> -->
+
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
+        <link href="css/font.css" rel="stylesheet">
+  </head>
+<<<<<<< HEAD
+  <body id = "" align="center">
+    <div id="profile_background" >
+      <img src="images/home.jpg" class="stretch" alt="" />
+      <%= link_to image_tag ("head.png") , :class => "stretch" %>
+    </div>
+      <%= render "layouts/navbar" , :locals => {:brand => "پروفایل ما"}%>
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2 jumbotron " id = "profile_main-content">
+=======
+  <body id = "">
+    <div id="profile_background">
+      <!--<%= link_to image_tag ("41.jpg") , :class => "stretch" %> -->
+    </div>
+        <%= render "layouts/navbar" , :locals => {:brand => "پروفایل ما"}%>
+        <br> <br>
+        <div class="jumbotron" id = "profile_main-content">
+>>>>>>> 9f1a438fad44e6dae16894b4890d25059b17c7c3
+            <div class = "row">
+                <div class="col-md-9">
+                    <div class="panel panel-danger" id ="box">
+                        <div class="panel-heading">
+                            <h3 class="panel-title row">
+                                <div class="col-md-5" id = "profile_desc">
+                                  تاریخ ازدواج: <%= @profile.ceremonyDate %>
+                                </div>
+                                <div class="col-md-7" id="desc"><b>
+                                  <%= @profile.brideName %>
+                                  <%= "و" %>
+                                  <%= @profile.groomName %></b>
+                                </div>
+
+                            </h3>
+                        </div>
+                        <div class="panel-body" >
+                          <p id = "desc">
+                            <%= @profile.aboutUs %>
+                          </p>
+                         </div>
+                    </div>
+                </div>
+                <div class = "col-md-3" align="center">
+                    
+                        <%= link_to image_tag (@profile.photo)  %>
+                        
+                </div>
+            </div>
+            <br>
+            <br>
+<<<<<<< HEAD
+            <div class="row container" id = "foott">
+                <a>
+                <div align="center">
+                    <%= button_to  "ویرایش اطلاعات", edit_profile_path, :class => 'btn btn-primary', :type=>'button', :id=>'profile_new-msg-btn'  ,:method => :get%> </a>
+                    <!-- <a class="btn btn-primary" role="button" id ="new-msg-btn">ویرایش اطلاعات</a> 
+                    <a class="btn btn-danger" role="button" > حذف حساب کاربری</a> -->
+                </div>
+                <a>
+=======
+            <div class="row">
+                <a>
+                <div class = "col-md-11">
+                    <%= button_to  "ویرایش اطلاعات", edit_profile_path, :class => 'btn btn-primary', :type=>'button',  :method => :get%> </a>
+                    <!-- <a class="btn btn-primary" role="button" id ="new-msg-btn">ویرایش اطلاعات</a> 
+                    <a class="btn btn-danger" role="button" > حذف حساب کاربری</a> -->
+                    </div>
+                    <div class = "col-md-1"
+                <a>
+                    <%= button_to  "حذف حساب کاربری", edit_profile_path, :class => 'btn btn-primary', :type=>'button', :method => :get%> </a>
+                    </div>
+>>>>>>> 9f1a438fad44e6dae16894b4890d25059b17c7c3
+            </div>
+
+
+      
+
+        </div>
+        <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>     
+  </body>
+</html>

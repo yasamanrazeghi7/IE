@@ -45,17 +45,22 @@
     <link href="css/profile.css" rel="stylesheet">
         <link href="css/font.css" rel="stylesheet">
   </head>
-  <body id = "">
-    <div id="profile_background">
-      <!--<%= link_to image_tag ("41.jpg") , :class => "stretch" %> -->
+  <body id = "" align="center">
+    <div id="profile_background" >
+      <!--<%= link_to image_tag ("41.jpg") , :class => "stretch" %> 
+      <%= link_to image_tag ("home.jpg") , :class => "stretch" %> -->
+      <%= link_to image_tag ("love.png") , :class => "stretch" %> 
     </div>
-        <%= render "layouts/navbar" , :locals => {:brand => "پروفایل ما"}%>
-        <br> <br>
-        <div class="jumbotron" id = "profile_main-content">
+      <%= render "layouts/navbar" , :locals => {:brand => "پروفایل ما"}%>
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2 jumbotron " align = "center" id = "profile_main-content">
+        <div class = "col-md-offset-2 col-md-8 col-md-offset-2" align="center">
+                        <%= image_tag (@profile.avatar.url ) , :class => "stretch"  %> 
+          <!-- <%= link_to image_tag ("images.jpg") , :class => "stretch" %> -->
+        </div>
             <div class = "row">
-                <div class="col-md-9">
-                    <div class="panel panel-danger" id ="box">
-                        <div class="panel-heading">
+                <div class="col-md-offset-2 col-md-8 col-md-offset-2" aligh = "center"> 
+                    <div class=" panel panel-info" aligh = "center" aligh = "center">
+                        <div class="panel-heading" alighn = "center">
                             <h3 class="panel-title row">
                                 <div class="col-md-5" id = "profile_desc">
                                   تاریخ ازدواج: <%= @profile.ceremonyDate %>
@@ -75,26 +80,23 @@
                          </div>
                     </div>
                 </div>
-                <div class = "col-md-3" align="center">
-                    
-                        <%= link_to image_tag (@profile.photo)  %>
-                        
-                </div>
+                <!--
+                 -->
             </div>
             <br>
             <br>
-            <div class="row">
-                <a>
-                <div class = "col-md-11">
-                    <%= button_to  "ویرایش اطلاعات", edit_profile_path, :class => 'btn btn-primary', :type=>'button',  :method => :get%> </a>
+            <div class="row container" id = "foott">
+                
+                <div align="center" id ="foott">
+                    <%= button_to  "ویرایش اطلاعات", edit_profile_path, :class => 'btn btn-primary', :type=>'button',  :method => :get%> 
                     <!-- <a class="btn btn-primary" role="button" id ="new-msg-btn">ویرایش اطلاعات</a> 
                     <a class="btn btn-danger" role="button" > حذف حساب کاربری</a> -->
-                    </div>
-                    <div class = "col-md-1"
-                <a>
-                    <%= button_to  "حذف حساب کاربری", edit_profile_path, :class => 'btn btn-primary', :type=>'button', :method => :get%> </a>
-                    </div>
-            </div>
+                </div>
+            </div> 
+
+
+      
+
         </div>
         <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.min.js"></script>     

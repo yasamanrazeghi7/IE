@@ -4,22 +4,73 @@ body
 	font-family:'B tabassom',tahoma;
 	font-size: 20px;
 	direction: rtl;
+    background-color: #E2E2DD;
+}
+#welcome
+{
+    color:#6666FF; 
+}
+.submit_class_name_here
+{
+    width: 20%;
+}
+#homeNav{
+    
+    color: #85C2FF;
+    background-color: #E2E2DD;
+
+}
+.my-nav
+{
+    color: #85C2FF;
+    background-color: #E2E2DD;
+    
+}
+
+#textNav
+{
+    color: #85C2FF;
+}
+#home-nav
+{
+    margin-bottom: 10px;
+}
+#innerNav
+{
+    padding-right: 40%;
+    background-color: #E2E2DD;
+    color: #85C2FF;
+
 }
 #signup-nav
 {
+    
     width:200px;
     height:relative;
-    position:absolute;
+   /* position:absolute;*/
     border: 4px groove #EFDECD;
     top:20%;
     left:0;
     z-index:100;
-    background:rgba(239,211,205,0.5);
-    color:#fff;
+  /*  background:rgba(239,211,205,0.5);*/
+    color: #85C2FF;
     overflow:hidden;
+    margin-bottom: 5px;
+}
+#head
+{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+#slide
+{
+    position: center;
+    height:relative;
+    background-color: #E2E2DD;
 }
 #start{
-	color:#333;
+	color: #85C2FF;
 	display:block;
 	font-size: 190%;
 	text-align: center;
@@ -28,6 +79,45 @@ body
 #start-btn{
     margin:5%;
     width: 90%;
+}
+#intro-Product
+{
+    background-color: #E2E2DD;
+}
+#intro-Trello
+{
+    background-color: #E2E2DD;
+    
+}
+#intro-Forum
+{
+    background-color: #E2E2DD;
+    
+}
+#email_field
+{
+    padding-top: 3%;
+}
+#contain-foot
+{
+    padding-top: 10px;
+    font-size: 30px;
+    color:#6666FF;
+
+}
+#link
+{
+    color:#6666FF;    
+}
+#link:hover
+{
+    background-color: transparent;
+    text-decoration: none;
+}
+.modal-content{
+    background-image: url('head.png');
+    background-color: #E2E2DD;
+    color:#6666FF;
 }
 .modal-header .close {
   float: left;
@@ -39,6 +129,68 @@ body
 {
     padding : 5px;
     width: 50%;
+}
+
+#intro-trello-image
+{
+    direction: rtl;
+    padding-top: 4px;
+    padding-right: 10%;
+    padding-left: 0%;
+    list-style: none;
+}
+
+#intro-trello-text
+{
+    direction: rtl;
+    padding-top: 4px;
+    padding-right: 10%;
+    padding-left: 0%;
+    list-style: none;
+    text-align: center;
+}
+
+#intro-forum-image
+{
+    direction: rtl;
+    padding-top: 4px;
+    padding-left: 5%;
+    padding-right: 5%;
+    list-style: none;
+}
+
+
+#intro-forum-text
+{
+    direction: rtl;
+    padding-top: 4px;
+    padding-right: 5%;
+    padding-left: 5%;
+    list-style: none;
+    text-align: center;
+
+}
+#basicModal
+{
+   /* background-image: "head.jpg";*/
+}
+
+#intro-product-image
+{
+    padding-right: 0%;
+    padding-left: 10%;
+    direction: rtl;
+    padding-top: 4px;
+    list-style: none;
+}
+#intro-product-text
+{
+    padding-right: 0%;
+    padding-left: 10%;
+    direction: rtl;
+    padding-top: 4px;
+    list-style: none;
+    text-align: center;
 }
 
 .input-group label
@@ -69,4 +221,13 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus
     padding-top: 0px;
     padding-bottom:0px;
 }
-
+#setSize
+{
+   width:  20px;
+   height: 10px
+}
+#link:hover
+{
+    background-color: transparent;
+    text-decoration: none;
+}

@@ -8,11 +8,11 @@
   <%= stylesheet_link_tag 'bootstrap.css', 'bootstrap.icon-large.min.css', 'font.css' , 'homepage.css','goods.css', 'service.css', 'jquery.maximage.css?v=1.2','screen.css?v=1.2', 'signup.css', 'profile.css' , 'navbar.css'%>
 </head>
 <body>
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+<% if notice %>
+    <p class="alert alert-info"><%= notice %></p>
 <% end %>
 <%= yield %>
 <%= javascript_include_tag 'jquery-1.11.0.min.js' ,'jquery.min.js', 'jquery.cycle.all.js', 'jquery.maximage.js','homepage.js', 'bootstrap.min.js' %>

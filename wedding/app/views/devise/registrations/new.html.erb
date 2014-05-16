@@ -1,21 +1,4 @@
-<!--
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
-
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
-<%= render "devise/shared/links" %>
-
--->
 <!DOCTYPE html>
 <html class='no-js' lang='en'>
 	<head>
@@ -28,36 +11,33 @@
 		<link rel="stylesheet" href="css/signup.css" />
     	<link rel="stylesheet" href="css/font.css" />
 	</head>
-	<body>
+	<body id="signup">
 	<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
         <div class="well" id="sign_up_page_container">    
      	    <div class="container-fluid">
                 <form id="signup" class="form-horizontal" role="form">
-            		<legend id="reg">ثبت‌نام</legend>		
-	        	    <div class= "col-md-6">
-	                    <div id="sign_up_pic"></div>
-                        <button type="button" id="sign_up-sel-btn" class=" btn btn-primary">انتخاب عکس</button>
-	        	    </div	        	    <div class= "col-md-6 ">
+            		<legend id="reg">ثبت‌نام</legend>			        	    
+                <div class= "col-md-offset-7 col-md-5 ">
 	        	        <div class="row form-group">
 	        	            <div class="col-sm-offset-4 col-sm-5">
                                <!-- <input type="text" class="form-control"> --> 
                                <%= f.text_field :email, {:id=>'sign_up_text_field' } %> <!-- injaa dorost she --> 
-                            </div>
-	        	            <div class ="col-sm-3">
+                          </div>
+	        	            <div class ="col-sm-3" >
                                <%= f.label "ایمیل" %><br />
 	        	            </div>
-                        </div>    	        	            
+                      </div>    	        	            
 	        	        <div class="row form-group">
 	        	            <div class="col-sm-offset-4 col-sm-5">
                                 <!-- <input type="password" class="form-control"> -->
-                                <%= f.password_field :password, autocomplete: "off"  %>
+                                <%= f.password_field :password,autocomplete: "off"  %>
                             </div>
 	        	            <div class ="col-sm-3" >
 	        	            	 <%= f.label "گذرواژه" %><br />
                                 <!-- <label class="control-label">گذرواژه</label> -->
 	        	            </div>
-                        </div>    	        	            
+                      </div>    	        	            
 	        	        <div class="row form-group">
 	        	            <div class="col-sm-offset-4 col-sm-5">
                                 <!--<input type=	"password" class="form-control"> -->
@@ -68,75 +48,16 @@
                                  <%= f.label "تکرار گذرواژه"%><br />
 	        	            </div>
                         </div> 
-                        <!--   	        	            
-	        	        <div class="row form-group">
-	        	            <div class="col-sm-offset-4 col-sm-5">
-                                <#%= f.text_field :brideName,  {:id=>'sign_up_text_field' } %>
-                            </div>
-	        	            <div class ="col-sm-3 control-label">
-                                <#%= f.label "نام عروس"%><br />
-	        	            </div>
-                        </div>    	        	            
-	        	        <div class="row form-group">
-	        	            <div class="col-sm-offset-4 col-sm-5">
-                                <#%= f.text_field :groomName,  {:id=>'sign_up_text_field' } %>
-                            </div>
-	        	            <div class ="col-sm-3">
-                                <#%= f.label "نام داماد"%><br />
-	        	            </div>
-                        </div>    	        	            
-	        	        <div class="row form-group">
-	        	            <div class="col-sm-offset-4 col-sm-5">
-                                 <input type="email" class="form-control">
-                                <#%= f.email_field :brideEmail, autofocus: true %>
-                            </div>
-	        	            <div class ="col-sm-3">
-                                <label class="control-label">ایمیل عروس</label> 
-                                <#%= f.label "ایمیل عروس" %><br />
-	        	            </div>
-                        </div>    	        	            
-	        	        <div class="row form-group">
-	        	            <div class="col-sm-offset-4 col-sm-5">
-                                 <input type="email" class="form-control"> 
-                                <#%= f.email_field :groomEmail, autofocus: true %>
-                            </div>
-	        	            <div class ="col-sm-3">
-                                <label class="control-label">ایمیل داماد</label>
-                                <#%= f.label "ایمل داماد" %><br />
-	        	            </div>
-                        </div>    	        	            
-	        	        <div class="row form-group">
-	        	            <div class="col-sm-offset-4 col-sm-5">
-                                 <input type="text" class="form-control">
-                                 ٌ <#%= f.date_field :ceremonyDate  %>
-                            </div>
-	        	            <div class ="col-sm-3">
-                                <label class="control-label">تاریخ مراسم</label>
-                                <#%= f.label "تاریخ مراسم" %><br />
-	        	            </div>
-                        </div>    	        	            
-	        	        <div class="row form-group">
-	        	            <div class="col-sm-offset-4 col-sm-5">
-                                <textarea type="text" class="form-control" rows="3"></textarea>
-                                <#%= f.text_area :aboutUs%>
-                            </div>
-	        	            <div class ="col-sm-3">
-                                 <label class="control-label">درباره‌ی ما</label>
-                                 <#%= f.label "درباره‌ی ‌ما"%><br /> 
-	        	            </div>
-                        </div>
-                        -->  	        	            
-	                    <div class = "row " id ="sign_up_btns">
-	                        <div class="col-sm-offset-6 col-sm-3">
-	                             <button id="cancel-btn" type="button" class="btn btn-danger btn-block">انصراف</button>
-	                        </div>
-                        	<div class="col-sm-3">
+                        	            
+	                    <div class = "row col-md-offset-4 col-md-1 col-md-9" id ="sign_up_btns" align="center">
+	                      
+                        	<div align="center">
                         	<!--
                         	     <button id="save-btn" type="button" class=" btn btn-success btn-block">ذخیره</button>
                         	     -->
-                        	     <%= f.submit "ذخیره" ,:class=> 'col-sm-3 btn btn-success btn-block' %>
+                        	     <%= f.submit "ذخیره" ,:class=> 'col-sm-3 btn btn-success btn-block sign_up_butt' %>
                             </div>
-                        </div>
+                      </div>
 	        	    </div>
 	        	</form>
 	        </div>	

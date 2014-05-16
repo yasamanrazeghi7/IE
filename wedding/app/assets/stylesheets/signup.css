@@ -8,8 +8,19 @@ body
 #signup
 {
     direction: rtl;
+    color: #6666FF;
 }
-
+#editProfile
+{
+    direction: rtl;
+    color: #B20000;
+    background-color: #FFE6CE;
+}
+#editReg
+{
+    direction: rtl;
+    color: #B20000;
+}
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus
 {   
     outline: 0;
@@ -20,15 +31,24 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus
     border-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
+
 #sign_up_page_container
 {
     margin: 5%;
     background :url('8.jpg');
     background-size: cover;
+    height: 600px;
+}
+#edit_page_container
+{
+    margin: 5%;
+    background :url('edit.jpg');
+    background-size: cover;
+    height: 600px;
 }
 #sign_up_pic
 {
-    border: 1px solid #66afe9;
+    border: 1px solid #6666FF; ;
     border-radius: 4px 4px 4px 4px;
 
     height: 200px;;
@@ -37,16 +57,51 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus
 }
 #sign_up_btns
 {
-    width: 100%;
-    padding : 5px;
+    width: 40%;
+    color: #6666FF;
+}
+
+#edit_btns
+{
+    width: 30%;
+    color: #6666FF;
+}
+#reg{
+ font-size: 30px;
+ color: #6666FF;
+ padding-bottom: 7%;   
 }
 #sign_up_sel-btn
 {
     margin-top: 2%;
     margin-bottom: 2%;
+    color: #6666FF;
 
 }
 #sign_up_text_field
 {
- width:42%;
+    width: 60%;
+}
+#sign_up_text_field
+{
+    width: 113%;
+}
+.sign_up_butt{
+    background-color:#85C2FF;
+    border-color: #85C2FF;
 }	
+.sign_up_butt:hover{
+    background-color: transparent;
+    text-decoration: none;
+    border-color: #85C2FF;
+}
+.edit_butt{
+    background-color:#B20000;
+    border-color: #B20000;
+    width: 70%;
+}   
+.edit_butt:hover{
+    background-color: transparent;
+    text-decoration: none;
+    border-color: #85C2FF;
+}   

@@ -13,7 +13,7 @@ fa:
       not_found_in_database: ایمیل یا رمزعبور نامعتبر.
       timeout: نشست شما منقضی شده است. برای ادامه دوباره وارد شوید.
       unauthenticated: پیش از ادامه باید وارد شوید یا ثبت نام کنید.
-      unconfirmed: باید حسابتان را قبل از ادامه تایید کنید.
+      unconfirmed: باید حسابتان را قبل از ادامه تایید کنید
     mailer:
       confirmation_instructions:
         subject: راهنمای تایید

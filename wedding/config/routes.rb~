@@ -1,9 +1,29 @@
 Wedding::Application.routes.draw do
+  resources :comments
+
+  resources :messages
+
+  resources :products
   resources :profiles
+
+  resources :product_groups
+  
+  namespace current_user.try(:admin) do
+     root to: "product_group/show"
+  end
+
 
   get "welcome/show"
   get "welcome/index"
-  root "facility_list", :to => "facility_list#show"
+  root :to => "welcome#index"
+  devise_for :users
+  get "product_groups", :to => "product_groups#index"
+  get "product_groups/show", :to => "product_groups#show"
+  get "products/show", :to => "products#show"
+  
+  resources :product_groups do
+    resources :products
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -58,14 +78,14 @@ Wedding::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root :to => "welcome#index"
-  devise_for :users
   devise_scope :user do
  	 get "sign_in", to: "devise/sessions#new"
    get "sign_out" => "devise/sessions#destroy"
   end
   get "profile", to: "profiles#index"
   get "profiles/show", to: "profiles#index"
+
+
   #devise_for :users do
   #get "welcome" => "devise/registrations#new", :as => :new_user_registration
   #get "account_settings" => "devise/registrations#edit"

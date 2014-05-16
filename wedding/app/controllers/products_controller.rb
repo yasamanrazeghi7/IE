@@ -28,12 +28,13 @@ class ProductsController < ApplicationController
     pro.suggestions = pro.suggestions + 1 
     pro.save
     SuggestMailer.suggestion_email(email,product,name,msg,current_user.email).deliver
-    redirect_to :back 
+    redirect_to :back , :notice => 'پیشنهاد شما ارسال شد.'
   end
 
   # GET /products/new
   def new
     @product = Product.new
+    @product.save
   end
 
   # GET /products/1/edit
@@ -88,6 +89,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:description, :photo_album)
+      params.require(:product).permit(:description, :photo_album, :name, :product_group_id)
     end
 end
