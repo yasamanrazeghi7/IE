@@ -1,0 +1,106 @@
+
+<div class = "container-fluid row">
+<div class = "row">  
+    <div class="col-md-12 container-fluid">
+        <div class="panel panel-info container-fluid">
+          <div class="panel-heading row">
+            <div class = "col-md-offset-1 col-md-2" align = "center">
+              هزینه
+            </div>
+            <div class = "col-md-2" align = "center">
+              زمان بندی
+            </div>
+            <div class = "col-md-3" align = "center">
+              توضیحات 
+            </div>
+            <div class = "col-md-2" align = "center">
+              عنوان
+            </div>
+            <div class = "col-md-1" align = "center">
+              وضعیت
+            </div>
+          </div>
+        <div>
+          <ul class="list-group">
+          <% @total = '0'.to_f %>
+        <% msgs.each do |item| %>
+          <li  class = "container-fluid" id="trello_item">
+              <div id = "trello-msg_in_forum">  
+                <div class = "row item container-fluid" >
+                  <div class = "col-md-1">
+                    <%= button_to 'حذف', item_path(item), :action => 'destroy', method: :delete,:class=>'round-button'  %>
+                      <% if !item.cost.blank?
+                          @total = item.cost.to_f + @total
+                        end
+                      %>
+                   
+                  </div>
+                  <div class = "col-md-2" align="center">
+                     <%= best_in_place item, :cost , :type => :textarea%>
+                   
+                  </div>
+                  <div class = "col-md-2" align = "center">
+                    <%= best_in_place item, :date , :type => :textarea%>
+                  </div>
+                  <div class="col-md-3">
+                    <p class="comment_body" align = "center">
+                <!--<%= item.comment %>-->
+                      <%= best_in_place item, :comment , :type => :textarea%>
+                    </p>
+                </div>
+                <div class = "col-md-2" align = "center">
+                  <%= best_in_place item, :title , :type => :textarea%>
+                  </div>
+                  <div class = "col-md-1" align = "center">
+                  <%= best_in_place item, :status , :type => :checkbox, :collection => ["انجام نشده", "انجام‌شده"]%>
+                  </div>
+                  
+              </div>
+             </div>                     
+          </li>
+          <hr>          
+        <% end %>
+          </ul>
+          </div>
+        </div>
+    </div>
+</div>
+    <div class=" container-fluid " align = "center" id = "newTask">        
+        <div class="  container-fluid" align = "center" >
+          <%= form_for(:item, :url => items_path) do |f| %>
+          <b><%= f.label :"کارت جدید" %></b><br>
+            
+              <div id = "row  container-fluid " align = "center">  
+                <div class = "row item container-fluid " align = "center" >
+                 <div  align = "center" id = "sal">
+                      <%= f.text_area :cost ,:placeholder => "هزینه", :class=>'col-md-3'%>
+                  </div>
+
+                  <div  align = "center" id = "sal">
+                    <%= f.text_area :date, :placeholder => "زمان برنامه‌ریزی" , :class=>'col-md-3'  %>
+                  </div>
+                  <div  align = "center" id = "sal">
+                      <%= f.text_area :comment ,:placeholder => "توضیحات", :class=>'col-md-3'%>
+                  </div>
+                  <div  align = "center" id = "sal">
+                    <%= f.text_area :title , :placeholder => "عنوان کارت", :class=>'col-md-3'  %>
+                  </div>
+                  
+                   
+                </div>
+             </div>                     
+        
+            </div> 
+          <div class="actions">
+              <%= f.hidden_field :scheduler_id, :value => scheduler.id %>
+              <div class=" col-md-5">        
+                <%= f.submit "نگارش", :class => 'btn btn-primary'%><span class="glyphicon glyphicon-pencil"></span>
+              </div>
+          </div>
+        </div>
+        <% end %>
+    </div>
+  </div>  
+  </div>
+
+</div>

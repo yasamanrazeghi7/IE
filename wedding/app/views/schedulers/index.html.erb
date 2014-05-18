@@ -1,0 +1,77 @@
+<!-- <h1>Listing schedulers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schedulers.each do |scheduler| %>
+      <tr>
+        <td><%= link_to 'Show', scheduler %></td>
+        <td><%= link_to 'Edit', edit_scheduler_path(scheduler) %></td>
+        <td><%= link_to 'Destroy', scheduler, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scheduler', new_scheduler_path %>
+-->
+<!--
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bridename:</strong>
+  <%= @profile.brideName %>
+</p>
+
+<p>
+  <strong>Groomname:</strong>
+  <%= @profile.groomName %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @profile.userName %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @profile.photo %>
+</p>
+
+<p>
+  <strong>Ceremonydate:</strong>
+  <%= @profile.ceremonyDate %>
+</p>
+
+<p>
+  <strong>Aboutus:</strong>
+  <%= @profile.aboutUs %>
+</p>
+
+<%= #link_to 'Edit', edit_profile_path(@profile) %> |
+<%= #link_to 'Back', profiles_path %> -->
+
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+  </head>
+  <body id = "" align="center">
+      <%= render "layouts/navbar" , :locals => {:brand => "پروفایل ما"}%>
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2 jumbotron " align = "center" id = "pg-main-content">
+        
+        </div>
+  </body>
+</html>

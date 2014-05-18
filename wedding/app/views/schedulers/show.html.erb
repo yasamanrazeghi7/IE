@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+  </head>
+  <body id = "trello" align="center">
+      <%= render "layouts/navbar" , :locals => {:brand => "محیط برنامه‌ریزی"}%>
+      
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2 jumbotron " align = "center" id = "trello-pg-main-content">
+<br>
+
+<%= render :partial => '/items/item_in_scheduler' , :locals =>{:msgs => @items, :newCom => @newItem, :scheduler => @scheduler}  %>        
+        </div>
+  </body>
+</html>
+
