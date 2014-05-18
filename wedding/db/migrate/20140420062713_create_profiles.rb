@@ -8,7 +8,6 @@ class CreateProfiles < ActiveRecord::Migration
       t.date :ceremonyDate
       t.text :aboutUs
       t.belongs_to :user
-        
       t.timestamps
     end
   end

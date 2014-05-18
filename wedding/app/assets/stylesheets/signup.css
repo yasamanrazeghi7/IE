@@ -1,14 +1,23 @@
 body
 {
-    	font-family: B Nazanin, 'B Nazanin', tahoma;
-	font-family:'B tabassom',tahoma;
-	font-size : 20px;
+        font-family: B Nazanin, 'B Nazanin', tahoma;
+    font-family:'B tabassom',tahoma;
+    font-size : 20px;
 
+}
+#admin
+{
+    background-color: white;
+    color: #6666FF;
 }
 #signup
 {
     direction: rtl;
     color: #6666FF;
+}
+.adminCon
+{
+    margin-right: 10%;
 }
 #editProfile
 {
@@ -36,6 +45,13 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus
 {
     margin: 5%;
     background :url('8.jpg');
+    background-size: cover;
+    height: 600px;
+}
+#admin_page_container
+{
+    margin: 5%;
+    background :url('admin.jpg');
     background-size: cover;
     height: 600px;
 }
@@ -89,7 +105,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus
 .sign_up_butt{
     background-color:#85C2FF;
     border-color: #85C2FF;
-}	
+}   
 .sign_up_butt:hover{
     background-color: transparent;
     text-decoration: none;

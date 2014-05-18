@@ -1,9 +1,9 @@
 body 
 {
-	font-family: Tahoma;
-	font-family:'B tabassom',tahoma;
-	font-size: 20px;
-	direction: rtl;
+    font-family: Tahoma;
+    font-family:'B tabassom',tahoma;
+    font-size: 20px;
+    direction: rtl;
     background-color: #E2E2DD;
 }
 #welcome
@@ -26,18 +26,16 @@ body
     background-color: #E2E2DD;
     
 }
-
+#shanbe{
+    margin-top: 5%;
+    
+}
 #textNav
 {
     color: #85C2FF;
 }
-#home-nav
-{
-    margin-bottom: 10px;
-}
 #innerNav
 {
-    padding-right: 40%;
     background-color: #E2E2DD;
     color: #85C2FF;
 
@@ -61,7 +59,7 @@ body
 {
     margin-right: 10%;
     margin-left: 10%;
-    margin-top: 5%;
+    margin-top: 60px;
 }
 #slide
 {
@@ -70,11 +68,11 @@ body
     background-color: #E2E2DD;
 }
 #start{
-	color: #85C2FF;
-	display:block;
-	font-size: 190%;
-	text-align: center;
-	padding-top: 20px;
+    color: #85C2FF;
+    display:block;
+    font-size: 190%;
+    text-align: center;
+    padding-top: 20px;
 }
 #start-btn{
     margin:5%;
@@ -100,19 +98,19 @@ body
 }
 #contain-foot
 {
-    padding-top: 10px;
     font-size: 30px;
     color:#6666FF;
 
 }
 #link
 {
-    color:#6666FF;    
+    color:#6666FF;
+    max-height: 120px;
+    width: 90%;    
 }
-#link:hover
-{
-    background-color: transparent;
-    text-decoration: none;
+#d-link{
+    color:#6666FF;
+    max-height: 200px;
 }
 .modal-content{
     background-image: url('head.png');
@@ -134,36 +132,37 @@ body
 #intro-trello-image
 {
     direction: rtl;
-    padding-top: 4px;
-    padding-right: 10%;
-    padding-left: 0%;
+    padding-right: 5%;
+    padding-left: 5%;
     list-style: none;
+    max-width: 350px;
+    max-height: 300px;
 }
 
 #intro-trello-text
 {
     direction: rtl;
-    padding-top: 4px;
-    padding-right: 10%;
-    padding-left: 0%;
+    padding-right: 5%;
+    padding-left: 5%;
     list-style: none;
     text-align: center;
-}
+ }
 
 #intro-forum-image
 {
     direction: rtl;
-    padding-top: 4px;
     padding-left: 5%;
     padding-right: 5%;
     list-style: none;
+    max-width: 350px;
+
+    max-height: 300px;
 }
 
 
 #intro-forum-text
 {
     direction: rtl;
-    padding-top: 4px;
     padding-right: 5%;
     padding-left: 5%;
     list-style: none;
@@ -177,20 +176,22 @@ body
 
 #intro-product-image
 {
-    padding-right: 0%;
-    padding-left: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
     direction: rtl;
-    padding-top: 4px;
     list-style: none;
+    max-width: 350px;
+    max-height: 300px;
+
 }
 #intro-product-text
 {
-    padding-right: 0%;
-    padding-left: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
     direction: rtl;
-    padding-top: 4px;
     list-style: none;
     text-align: center;
+
 }
 
 .input-group label
@@ -218,7 +219,6 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus
     width: 100%;
     padding-left:14%;
     padding-right:14%;;
-    padding-top: 0px;
     padding-bottom:0px;
 }
 #setSize

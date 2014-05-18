@@ -9,7 +9,10 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1
   # GET /profiles/1.json
-  def show   
+  def show
+   # if current_user.id.to_s != params[:id].to_s
+   #   redirect_to :root, :notice => 'دسترسی به این صفحه برای شما امکان‌پذیر نیست'
+   #end
   end
 
   # GET /profiles/new
@@ -44,7 +47,7 @@ class ProfilesController < ApplicationController
   def update
     respond_to do |format|
       if @profile.update(profile_params)
-        format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
+        format.html { redirect_to @profile }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

@@ -19,6 +19,9 @@ class ProductsController < ApplicationController
 
   end
 
+  def show_pictures
+  end
+
   def send_email
     name = params[:name]
     email = params[:email]

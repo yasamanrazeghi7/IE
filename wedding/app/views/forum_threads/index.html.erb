@@ -34,7 +34,7 @@
                 </div>
                 <div class = "row">
                 <div class=" col-md-4">                
-                آخرین تغییرات: <%= i.updated_at%>
+                آخرین تغییرات: <%= time_ago_in_words(i.updated_at) %> پیش
                 </div>
                 <div class=" col-md-2">                
                 <%= i.forum_messages.size%> نظر

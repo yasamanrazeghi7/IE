@@ -7,7 +7,17 @@ body
   font-size: 20px;
   /*font-family:IranNastaliq,'IranNastaliq',tahoma;*/
 }
-
+.item
+{
+  padding-top: 1%;
+  margin: 4px;
+}
+#sal{
+  
+}
+.marg{
+  margin-right: 10%;
+}
 #main-content
 {
     margin: 5%;
@@ -15,7 +25,11 @@ body
     margin-top:50px;
     background-color:#EFDECD;
 }
-
+#newTask{
+  border:solid;
+  border-radius: 5px;
+  border-color: white;
+}
 #contain
 {
   background-color: blue;
@@ -33,6 +47,9 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus
 #reg{
   
 }
+#trello-pg-main-content{
+  background-color: transparent;
+}
 .container {
   margin-top : 100px;
   backround-image: inherit;
@@ -43,6 +60,10 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus
   margin-right : 0px;
   margin-left : 0px;
   background-color:#FFF8F8;
+}
+#trello
+{
+  background-image: url("prof.png");
 }
 .input-group label
 {
@@ -170,7 +191,7 @@ background : url(../images/back2.jpg);
 
 #thread_item
 {
-list-style: none;
+  list-style: none;
 }
 
 #link_item:hover
@@ -182,4 +203,32 @@ list-style: none;
     background-color: transparent;
     color: #34DDDD;
     text-decoration: none;
+}
+#trello_item
+{
+  list-style: none;
+  
+}
+#trello-msg_in_forum{
+
+}
+.round-button {
+    display:block;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: #B80000;
+    box-shadow: 0 0 3px gray;
+    font-size:10px;
+    font-weight:bold;
+}
+.round-button:hover {
+    text-decoration: none;
+    background-color: #B80000;
+
 }

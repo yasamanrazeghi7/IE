@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html class='no-js' lang='en'>
-	<head>
-		<title>Wedding Planner</title>
-		<meta charset='utf-8' />
-		<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
-		<meta name="language" content="en" />
-     	<meta content='width=device-width, initial-scale=1.0' name='viewport' />
-	</head>
-	<body id="welcome">
-    <div class = "container-fluid" id = "home-nav"> 
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id ="homeNav">
-            <div class="container-fluid my-nav" id ="homeNav">
-                    <a class="navbar-brand" href="information.html"></a>
-                     <!--<%= form_tag '/home/search', :method => :get do%>
-                    <%= text_field_tag :q%>
-                    <%= submit_tag 'search'%>
-                    <%end%>
-                    -->
-                    <ul class="nav navbar-nav navbar-right" id="innerNav" >
-                        <li id= "navText"><a href="#">خانه</a></li>
-                        <li id= "navText"> <a <%= link_to "خدمات", product_groups_path %> </a> </li>
-                        <li id= "navText"><a href="#">انجمن</a></li>
-                        <li id= "navText"><a href="#"  data-toggle="modal" data-target="#basicModal">ورود</a></li>  
-                    </ul>
+  <head>
+    <title>Wedding Planner</title>
+    <meta charset='utf-8' />
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <meta name="language" content="en" />
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+  </head>
+  <body id="welcome">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id = "homeNav">
+            <div class="container-fluid"  id = "homeNav">
+                <div class="navbar-header"  id = "homeNav">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                       <span class="sr-only">Toggle navigation</span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"  id = "homeNav" align="center">
+                    <ul class="nav navbar-nav navbar-right col-md-7"  id = "innerNav" align="center"  >
+                        <li><a href="#">خانه</a></li>
+                    <li><a <%= link_to "خدمات", product_groups_path %> </a> </li>
+                    <li><a <%= link_to "انجمن", forum_threads_path %> </a> </li>
+                    <li><a href="#"  data-toggle="modal" data-target="#basicModal">ورود</a></li>  
+                </ul>
+                </div>
             </div>
-     </nav>
-  </div>
+        </nav>
   <div class = "container-fluid" id = "head" align = "center">
-    <%=link_to image_tag("headRT.jpg", :alt => "Slide1", :size=>'900x120'), {:id=>"link", :class => "img-responsive", :alt => "Responsive image" } %>
+    <%=image_tag "headRT.jpg", {:size=>'900x120', :height => '100 ',:id=>"link", :class => "img-responsive", :alt => "Responsive image" } %>
   </div>
    <div class = "container-fluid" id = "slide">
     <div id="carousel" class="carousel slide center" data-ride="carousel" align="center">
@@ -44,122 +46,89 @@
         </ol>
         <div class="carousel-inner" margin: auto>
           <div class="item active">
-            <%=link_to image_tag("111.jpg", :alt => "Slide1", :size=>'900x400'), {:class => "img-responsive", :alt => "Responsive image"} %>       
+            <%=link_to image_tag("111.jpg", :alt => "Slide1", :size=>'450x200'), {:class => "img-responsive", :alt => "Responsive image"} %>       
           </div>
           <div class="item">
-            <%=link_to image_tag("222.jpg", :alt => "Slide2", :size=>'900x400'), {:class => "img-responsive", :alt => "Responsive image"} %>
+            <%=link_to image_tag("222.jpg", :alt => "Slide2", :size=>'450x200'), {:class => "img-responsive", :alt => "Responsive image"} %>
           </div>
           <div class="item">
-            <%=link_to image_tag("333.jpg", :alt => "Slide3", :size=>'900x400'), {:class => "img-responsive", :alt => "Responsive image"} %>
+            <%=link_to image_tag("333.jpg", :alt => "Slide3", :size=>'450x200'), {:class => "img-responsive", :alt => "Responsive image"} %>
           </div>
           <div class="item">
-            <%=link_to image_tag("444.jpg", :alt => "Slide4", :size=>'900x400'), {:class => "img-responsive", :alt => "Responsive image"} %>
+            <%=link_to image_tag("444.jpg", :alt => "Slide4", :size=>'450x200'), {:class => "img-responsive", :alt => "Responsive image"} %>
           </div>
           <div class="item">
-            <%=link_to image_tag("555.jpg", :alt => "Slide5", :size=>'900x400'), {:class => "img-responsive", :alt => "Responsive image"} %>
+            <%=link_to image_tag("555.jpg", :alt => "Slide5", :size=>'450x200'), {:class => "img-responsive", :alt => "Responsive image"} %>
           </div>
           <div class="item">
-            <%=link_to image_tag("666.jpg", :alt => "Slide6", :size=>'900x400'), {:class => "img-responsive", :alt => "Responsive image"} %>
+            <%=link_to image_tag("666.jpg", :alt => "Slide6", :size=>'450x200'), {:class => "img-responsive", :alt => "Responsive image"} %>
           </div>
           <div class="item">
-            <%=link_to image_tag("777.jpg", :alt => "Slide7", :size=>'900x400'), {:class => "img-responsive", :alt => "Responsive image"} %>
+            <%=link_to image_tag("777.jpg", :alt => "Slide7", :size=>'450x200'), {:class => "img-responsive", :alt => "Responsive image"} %>
           </div>
           <div class="item">
-            <%=link_to image_tag("888.jpg", :alt => "Slide8", :size=>'900x400'), {:class => "img-responsive", :alt => "Responsive image"} %>
+            <%=link_to image_tag("888.jpg", :alt => "Slide8", :size=>'450x200'), {:class => "img-responsive", :alt => "Responsive image"} %>
           </div>       
         </div>
         
     </div>        
-	</div>
+  </div>
     <div class= "container-fluid" id = "contain-foot">
-        <div class="container col-md-4" id = "intro-Product">
+        <div class="container col-md-4" id = "intro-Product" align = "center">
             
             <li id = "intro-product-image" align="center">
-              <%=link_to image_tag("product.jpg", :size=>'350x300'), product_groups_path, {:class => "img-responsive", :alt => "Responsive image", :id=>"link"} %>
+              <%=link_to image_tag("product.jpg",{ :size=>'350x300' ,:class => "img-responsive - stretch", :alt => "Responsive image", :id=>"d-link"} ), product_groups_path %>
             </li>
-            <li id="intro-product-text">
+            <li id="intro-product-text" align= "center">
               معرفی بهترین ارائه‌دهندگان خدمات عروسی در سراسر کشور
             </li>
             
         </div>
-        <div class= "container col-md-4" id = "intro-Forum">
+        <div class= "container col-md-4" id = "intro-Forum" align = "center">
         <li id = "intro-forum-image" align="center">
-            <%=link_to image_tag("forum.jpg", :size=>'350x300'), product_groups_path,  :class => "img-responsive", :alt => "Responsive image", :id=>"link" %>
-        </li>
-        <li id="intro-forum-text">
+            <%=link_to image_tag("forum.jpg",{ :size=>'350x300',  :class => "img-responsive", :alt => "Responsive image", :id=>"d-link"} ) ,product_groups_path %>
+         </li>
+        <li id="intro-forum-text" align= "center">
             با دوستان خود مشورت کنید
         </li>
         </div>
-        <div class= "container col-md-4" id = "intro-Trello">
+        <div class= "container col-md-4" id = "intro-Trello" align = "center">
         <li id = "intro-trello-image" align="center">
-            <%=link_to image_tag("WeddingPlanner.jpg", :size=>'350x300'), :class => "img-responsive", :alt => "Responsive image" , :id=>"link"%>
+            <%=image_tag "WeddingPlanner.jpg", {:size=>'350x300' ,:class => "img-responsive", :alt => "Responsive image" , :id=>"d-link"}%>
         </li>
-        <li id="intro-trello-text">
+        <li id="intro-trello-text" align= "center">
             با برنامه‌ریزی دقیق با آرامش به روز عروسی خود برسید
         </li>
         </div>
     </div>
   
-
-
-
-
-
-<!--
-		<div id="signup-nav">
-            <div id = "start" >
-               <span class="glyphicon glyphicon-chevron-right"></span>
-            </div> 
-            
-             <div class="btn-group-vertical" id="start-btn">
-              
-              <%= button_to  "خروج", destroy_user_session_path, :class => 'btn btn-sm btn-primary trans', :type=>'button', :id=>'sign_up_btns'  ,:method => :delete%>
-                 
-
-                <%= button_to  "ثبت‌نام", new_user_registration_path, :class => 'btn btn-sm btn-primary trans', :type=>'button', :id=>'sign_up_btns'  ,:method => :get%>
-                 <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#basicModal">
-                 ورود
-                 </a>
-            </div>
-        </div>
-
-    -->    
-    <div class = "container-fuid">
+<div class = "container-fuid">
         <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-        
             <div class="modal-dialog">
                 <div class="modal-content">
                   
                     <%= form_for(:user, :url => session_path(:user)) do |f| %>
-                        <div id = "email_field" align="center">
-                         <%= f.text_field :email %>
+                        <div id = "email_field" align="center" >
+                         <%= f.text_field :email , :placeholder => '  ایمیل' %>
                         </div>
                          <br>
-                        <div id = "pass_field"  align= "center">
-                            <%= f.password_field :password %> <br>
+                        <div id = "pass_field"  align= "center" >
+                            <%= f.password_field :password , :placeholder => '  گذرواژه' %> <br>
                         </div>
                         <div align="center">
                             <%= f.check_box :remember_me %>
-                            <%= f.label :"مرا به خاطر بسپار" %>
+                            <%= f.label :"مرا به خاطرت نگه‌دار" %>
                         </div>
-                       
-                  
-                  
-                    <!--
-                    <p>
-                        <a href="url" data-toggle="modal" data-target="#smallModal" id="frgt-pass-link" aria-hidden="true">گذرواژه‌ی خود را فراموش کرده‌اید؟</a>
-                    </p>
-                    -->
                         <div align="center">
                             <%= f.submit 'ورود' ,:class => 'submit_class_name_here'%>
                         </div>
                         <div align="center">
-                        <%= link_to "گذر‌واژّه‌ی خود را فراموش کرده‌اید؟", new_password_path(:user), :id=>"link" %>
+                        <%= link_to "گذر‌واژه‌ی خود را فراموش کرده‌اید؟", new_password_path(:user), :id=>"link" %>
                         </div>
                         <div align="center">
                         <%= link_to "از اعضا نیستید؟", new_user_registration_path, :id=>"link"%>
                         </div>
-                          <% end %>
+                    <% end %>
                     
                 </div>
             </div>
@@ -171,17 +140,14 @@
                 </div>
             </div>
         </div>
-	
+  
        
   </body>
-
- 
-  <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')<script>
- <script src="js/bootstrap.min.js"></script>
-
- <script>
-  $(document).ready(function(){
-    $('.carousel').carousel();
-  });
-</script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+  </script>
 </html>

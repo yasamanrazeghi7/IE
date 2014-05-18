@@ -224,7 +224,7 @@ fa:
             login: 'نام کاربر'
             password: 'رمز عبور'
             password_confirmation: 'تکرار رمز عبور'
-            remember_me: 'مرا به خاطرت نگه‌دار'
+            remember_me: 'مرا به خاطر بسپار'
         setting:
             user_privacy_status: 'نوع پروفایل'
             user_serachable_status: 'قابلیت جستجوی پروفایل'
@@ -315,7 +315,6 @@ fa:
   suggestions: 'پیشنهادات'
   people: 'افراد'
   latest_suggestion: 'پیشنهاد اخیر'
-  Profile_was_successfully_updated: 'ویرایش پروفایل با موفقیت انجام شد'
   
   devise:
     confirmations:

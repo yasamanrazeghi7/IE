@@ -1,4 +1,8 @@
 Wedding::Application.routes.draw do
+  resources :schedulers
+
+  resources :items
+
   resources :forum_messages
 
   resources :forum_threads
@@ -11,6 +15,7 @@ Wedding::Application.routes.draw do
   resources :profiles
 
   resources :product_groups
+
  #
  # authenticated :admin do
   #  if current_user.try(:admin)
@@ -18,6 +23,7 @@ Wedding::Application.routes.draw do
    # end
 
   post "products/send_email", :to => "products#send_email"
+  post "forum_messages/send_email", :to => "forum_messages#send_email"
   get "welcome/show"
   get "welcome/index"
   get "welcome/search"
@@ -91,7 +97,8 @@ Wedding::Application.routes.draw do
   end
   get "profile", to: "profiles#index"
   get "profiles/show", to: "profiles#index"
-
+  get "scheduler", to: "schedulers#index"
+  get "schedulers/show", to: "schedulers#index"
 
   #devise_for :users do
   #get "welcome" => "devise/registrations#new", :as => :new_user_registration

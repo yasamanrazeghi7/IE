@@ -1,4 +1,83 @@
-<h1>New product</h1>
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+	<head>
+		<title>Admin Form</title>
+		<meta charset='utf-8' />
+		<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+		<meta name="language" content="en" />
+		<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+	</head>
+	<body id="admin">
+	<%= form_for(@product) do |f| %>
+    <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+        <div class="well" id="admin_page_container">    
+     	    <div class="container-fluid">
+                <form id="signup" class="form-horizontal" role="form">
+            		<legend id="reg">اضافه کردن محصول</legend>			        	    
+                <div class= " col-md-4 col-md-offset-7container-fluid adminCon">
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-4">
+                               <!-- <input type="text" class="form-control"> --> 
+                               <%= f.text_field :name , {:id=>'sign_up_text_field' } %> <!-- injaa dorost she --> 
+                          </div>
+	        	            <div class ="col-sm-4" >
+                               <%= f.label "نام محصول" %><br>
+	        	            </div>
+                      </div>    	        	            
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-4">
+                                <!-- <input type="password" class="form-control"> -->
+                                <%= f.text_area :description %>
+                            </div>
+	        	            <div class ="col-sm-4" >
+	        	            	 <%= f.label "توضیح محصول" %><br>
+                                <!-- <label class="control-label">گذرواژه</label> -->
+	        	            </div>
+                      </div>    	        	            
+	        	        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-4">
+                                <!--<input type=	"password" class="form-control"> -->
+                                 <%= f.text_field :photo_album %>
+                            </div>
+	        	            <div class ="col-sm-4">
+                                <!-- <label class="control-label">تکرار گذرواژه</label> -->
+                                 <%= f.label "اضافه کردن عکس" %><br>
+	        	            </div>
+                        </div> 
 
-<%= render 'form' %>
-<%= link_to 'Back', products_path %>
+                        <div class="row form-group">
+	        	            <div class="col-sm-offset-4 col-sm-4">
+                                <!--<input type=	"password" class="form-control"> -->
+                                 <%= f.number_field :product_group_id %>
+                            </div>
+	        	            <div class ="col-sm-4">
+                                <!-- <label class="control-label">تکرار گذرواژه</label> -->
+                                 <%= f.label "گروه محصول" %><br>
+	        	            </div>
+                        </div> 
+                        	            
+	                    <div class = "row col-md-offset-4 col-md-1 col-md-offset-7" id ="sign_up_btns" align="center">
+	                      
+                        	<div align="center">
+                        	    <%= f.submit "ذخیره" ,:class=> 'col-sm-offset-8 col-sm-4 btn btn-success btn-block sign_up_butt' %>
+                            </div>
+                      </div>
+	        	    </div>
+	        	</form>
+	        </div>	
+	    <div>
+	    <% end %>
+		</body>
+    
+</html> 
+
+
+

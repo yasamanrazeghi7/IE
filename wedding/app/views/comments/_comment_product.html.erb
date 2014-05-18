@@ -9,10 +9,10 @@
     <%= form_for(:comment, :url => comments_path) do |f| %>
 
           <%= f.label :"نظر تازه" %><br>
-          <%= f.text_area :content , :size => '74x1'%>
+          <%= f.text_area :content , :size => '73x1'%>
         <div class="actions">
               <%= f.hidden_field :product_id, :value => prod.id %>
-              <%= f.submit "نگارش" %><span class="glyphicon glyphicon-pencil"></span>
+              <%= f.submit "نگارش"  , :class => 'btn btn-primary'%>
               
             </div>
           </div>
@@ -50,7 +50,7 @@
                   </div>
                   </b>
                   <br>
-                  <div class="col-md-1"><%= image_tag comment.user.profile.photo ,{ :width => 100, :height => 80, :class => 'img-responsive' , :alt => 'Responsive image'}%> 
+                  <div class="col-md-2 "><%= image_tag comment.user.profile.avatar ,{ :width => 200,  :height => 120, :class => 'img-responsive marg' , :alt => 'Responsive image'}%> 
                   </div>
                 </div>
                 <div class = "row">

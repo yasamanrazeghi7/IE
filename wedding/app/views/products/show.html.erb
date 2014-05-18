@@ -5,31 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Information</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/information.css" rel="stylesheet">
-    <link href="css/font.css" rel="stylesheet">
   </head>
   <body>
     <%= render "layouts/navbar" , :locals => {:brand => ""}%>
-        <div class="jumbotron" id = "pg-main-content">
-            <div class = "row">
-                <div class="col-md-12" id = "product_description">
-                    <div class="panel panel-info" id ="box">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                          <b>
-                          <%=@product.name%>
-        </b>
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                          <p> 
-        <%=@product.description%>
-        </p>
-                        </div>
+    <div class="jumbotron" id = "pg-main-content">
+        <div class = "row">
+            <div class="col-md-12" id = "product_description">
+                <div class="panel panel-info" id ="box">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                      <b>
+                      <%=@product.name%>
+    </b>
+                        </h3>
                     </div>
-                </div></div>
-                <br><br>
+                    <div class="panel-body">
+                      <p> 
+    <%=@product.description%>
+    </p>
+                    </div>
+                </div>
+            </div></div>
                 <div class = "row">
                 <div class = "col-md-12">
       <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -71,13 +67,6 @@
             <button type="button" class="btn btn-default " id= "new-msg-btn" data-toggle="modal" data-target="#suggest-modal">
   <b>پیشنهاد به دوستان</b>
       </button>
-      <!--
-            <button type="button" class="btn btn-default " id="new-msg-btn">
-  <b>دوست نداشتم</b>
-      </button>
-            <button type="button" class="btn btn-default " id="new-msg-btn"> 
-  <b>دوست داشتم</b>
-      </button>-->
         </div>
         </div>
         <div class ="row">
@@ -119,16 +108,7 @@
                          <%= submit_tag 'ارسال', class: 'btn btn-success' %>
                         </div>
                    <% end %>
-                      <!--          <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="گیرنده">
-                                </div>
-                                <div class="input-group" >
-                                    <input type="text" class="form-control" rows = "2"placeholder="متن پیشنهاد">
-                                </div>
-                      -->
-                            
                     </div>
-                  
                 </div>
             </div>
         </div>

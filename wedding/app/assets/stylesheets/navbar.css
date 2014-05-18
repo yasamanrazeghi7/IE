@@ -4,11 +4,30 @@
 	width: 90%;
 	margin-left: 5%;	
 	margin-right: 5%;
-	
+
+}
+.mrg{
+	margin-bottom: 1%;
 }
 .alert-info{
 	width: 40%;
 	margin-right: 30%;
 	margin-left: 30%;
 	margin-top: 5%;
+}
+.alert-danger{
+	width: 40%;
+	margin-right: 30%;
+	margin-left: 30%;
+	margin-top: 5%;
+}
+.alert-success{
+	width: 40%;
+	margin-right: 30%;
+	margin-left: 30%;
+	margin-top: 5%;
+}
+.kh{
+	padding-right: 5%;
+	margin-left: 5%;
 }

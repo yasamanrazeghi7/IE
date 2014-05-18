@@ -69,6 +69,11 @@ hr.style-seven:before { /* Not really supposed to work, but does */
 .more-info{
   margin-top: -30px;
   margin-bottom: 5px;
+
+}
+.itm{
+    max-height: 220px;
+
 }
 .more-info:hover{
   background-color: transparent;

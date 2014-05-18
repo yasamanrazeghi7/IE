@@ -6,8 +6,10 @@ class ApplicationController < ActionController::Base
   ######yadet nare
   #protect_from_forgery with: :exception
   #before_action :authenticate_user!
+ 
  before_action :configure_permitted_parameters, if: :devise_controller?
  before_action :require_profile, if: :devise_controller?
+ before_action :require_scheduler
  before_action :if_admin
 
   protected
@@ -28,6 +30,17 @@ class ApplicationController < ActionController::Base
   		end
       #redirect_to profile_path(current_user.profile.id);
   	end
+  end
+
+  def require_scheduler
+    if !current_user.blank?
+      if current_user.scheduler.blank?
+        @scheduler = Scheduler.new()
+        @scheduler.save
+        @scheduler.user = current_user
+        current_user.scheduler = @scheduler
+      end
+    end
   end
 
   def if_admin

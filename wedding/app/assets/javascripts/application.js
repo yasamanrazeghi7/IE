@@ -14,4 +14,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.purr
+//= require jquery-1.11.0.min 
+//= require jquery.min
+//= require collapse
+//= require carousel
+//= require best_in_place
 //= require_tree .
+
+

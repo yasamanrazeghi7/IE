@@ -25,20 +25,30 @@
             </div>
 </div> 
 
-<h2>Sign in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div><%= f.label "ایمیل" %><br />
-  <%= f.email_field :email, autofocus: true %></div>
-
-  <div><%= f.label "گذر‌واژه" %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<div class="col-md-offset-1 col-md-10 col-md-offset-1 modal-content " id = "shanbe">
+                  
+                    <%= form_for(:user, :url => session_path(:user)) do |f| %>
+                        <div id = "email_field" align="center" >
+                         <%= f.text_field :email , :placeholder => '  ایمیل' %>
+                        </div>
+                         <br>
+                        <div id = "pass_field"  align= "center" >
+                            <%= f.password_field :password , :placeholder => '  گذرواژه' %> <br>
+                        </div>
+                        <div align="center">
+                            <%= f.check_box :remember_me %>
+                            <%= f.label :"مرا به خاطرت نگه‌دار" %>
+                        </div>
+                        <div align="center">
+                            <%= f.submit 'ورود' ,:class => 'submit_class_name_here'%>
+                        </div>
+                        <div align="center">
+                        <%= link_to "گذر‌واژه‌ی خود را فراموش کرده‌اید؟", new_password_path(:user), :id=>"link" %>
+                        </div>
+                        <div align="center">
+                        <%= link_to "از اعضا نیستید؟", new_user_registration_path, :id=>"link"%>
+                        </div>
+                    <% end %>
+                    
+                </div>

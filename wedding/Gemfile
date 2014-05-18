@@ -35,6 +35,10 @@ gem "cocaine", '~> 0.5.1'
 
 gem 'carrierwave'
 
+gem 'x-editable-rails'
+
+gem "best_in_place", github: 'bernat/best_in_place', branch: "rails-4"
+
 gem 'rake' , '10.3.1'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

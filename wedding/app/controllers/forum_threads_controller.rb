@@ -1,6 +1,6 @@
 class ForumThreadsController < ApplicationController
   before_action :set_forum_thread, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /forum_threads
   # GET /forum_threads.json
   def index
@@ -29,7 +29,7 @@ class ForumThreadsController < ApplicationController
 
     respond_to do |format|
       if @forum_thread.save
-        format.html { redirect_to @forum_thread, notice: 'Forum thread was successfully created.' }
+        format.html { redirect_to @forum_thread, notice: 'بحث جدید ایجاد شد' }
         format.json { render action: 'show', status: :created, location: @forum_thread }
       else
         format.html { render action: 'new' }

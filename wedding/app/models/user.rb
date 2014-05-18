@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_one :profile 
+  has_one :scheduler
   has_many :comments, :foreign_key => 'user_id'
   has_many :forum_messages, :foreign_key => 'user_id'
   has_many :messages

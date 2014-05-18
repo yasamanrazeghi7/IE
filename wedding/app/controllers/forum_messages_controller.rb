@@ -22,6 +22,13 @@ class ForumMessagesController < ApplicationController
   def edit
   end
 
+  def send_email
+    r_email = params[:email]
+    msg = params[:msg]
+    sub = params[:sub]
+    MessageMailer.message_email(r_email,sub, msg, current_user.profile.brideName + ' و '+ current_user.profile.groomName).deliver
+    redirect_to :back , :notice => 'پیام شما با موفقیت ارسال شد'
+  end
   # POST /forum_messages
   # POST /forum_messages.json
   def create
@@ -31,7 +38,7 @@ class ForumMessagesController < ApplicationController
 
     respond_to do |format|
       if @forum_message.save
-        format.html { redirect_to @forum_thread, notice: 'Forum message was successfully created.' }
+        format.html { redirect_to @forum_thread, notice: 'نظر شما با موفقیت اضافه شد.' }
         format.json { render action: 'show', status: :created, location: @forum_message }
       else
         format.html { render action: 'new' }
